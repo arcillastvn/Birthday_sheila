@@ -2,1725 +2,1464 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>For Sheila ♡</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Pacifico&display=swap');
 
 :root{
-    --blue:#d9ebff;
-    --blue-dark:#8fc4e9;
-    --pink:#ffe1ec;
-    --pink-dark:#efaac5;
-    --yellow:#fff0b5;
-    --yellow-dark:#e8cd72;
-    --cream:#fffaf0;
-    --text:#77717a;
-    --white:#ffffff;
+  --cream:#fffaf0;
+  --blue:#d8edff;
+  --blue2:#91c9ef;
+  --pink:#ffdce9;
+  --pink2:#efa8c5;
+  --yellow:#fff0a9;
+  --yellow2:#e5ca69;
+  --text:#77727a;
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    font-family:'Quicksand',sans-serif;
-    background:var(--cream);
-    color:var(--text);
-    overflow-x:hidden;
+  font-family:Quicksand,sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  overflow-x:hidden;
 }
 
 button{
-    font-family:inherit;
+  font-family:inherit;
+  cursor:pointer;
 }
 
-/* =========================
-   GLOBAL
-========================= */
-
-.hidden{
-    display:none!important;
-}
+.hidden{display:none!important}
 
 .page{
-    min-height:100vh;
-    padding:45px 18px 70px;
-    position:relative;
-    overflow:hidden;
+  min-height:100vh;
+  padding:40px 18px 70px;
+  position:relative;
+  overflow:hidden;
 }
 
 .content{
-    width:min(92%,700px);
-    margin:auto;
-    position:relative;
-    z-index:2;
+  width:min(92%,700px);
+  margin:auto;
+  position:relative;
+  z-index:2;
 }
 
 .script{
-    font-family:'Pacifico',cursive;
+  font-family:Pacifico,cursive;
 }
 
-h1,h2{
-    line-height:1.3;
-}
-
-.center{
-    text-align:center;
-}
-
-.soft-card{
-    background:rgba(255,255,255,.82);
-    border:3px solid #f2e6dc;
-    border-radius:28px;
-    padding:25px 20px;
-    box-shadow:0 12px 30px rgba(150,130,110,.08);
-}
-
-/* =========================
-   DECOR
-========================= */
+.center{text-align:center}
 
 .decor{
-    position:absolute;
-    pointer-events:none;
-    user-select:none;
-    z-index:1;
-    animation:float 4s ease-in-out infinite;
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  animation:float 4s ease-in-out infinite;
 }
 
-.d1{top:7%;left:7%;font-size:28px;}
-.d2{top:12%;right:7%;font-size:30px;animation-delay:.8s;}
-.d3{bottom:10%;left:6%;font-size:27px;animation-delay:1.5s;}
-.d4{bottom:12%;right:8%;font-size:25px;animation-delay:2s;}
+.d1{top:7%;left:7%;font-size:32px}
+.d2{top:14%;right:7%;font-size:32px;animation-delay:.7s}
+.d3{bottom:12%;left:7%;font-size:28px;animation-delay:1.3s}
+.d4{bottom:14%;right:8%;font-size:27px;animation-delay:2s}
 
 @keyframes float{
-    0%,100%{transform:translateY(0) rotate(-5deg)}
-    50%{transform:translateY(-10px) rotate(5deg)}
+  0%,100%{transform:translateY(0) rotate(-4deg)}
+  50%{transform:translateY(-10px) rotate(5deg)}
 }
-
-/* =========================
-   BUTTON
-========================= */
 
 .main-btn{
-    border:none;
-    background:var(--blue);
-    color:#658ba9;
-    padding:13px 25px;
-    border-radius:30px;
-    font-weight:700;
-    font-size:15px;
-    cursor:pointer;
-    box-shadow:0 5px 0 #a9cee8;
-    transition:.2s;
+  border:0;
+  padding:13px 25px;
+  border-radius:30px;
+  background:var(--blue);
+  color:#648aa8;
+  font-weight:700;
+  box-shadow:0 5px 0 #afd1e9;
+  transition:.2s;
 }
 
-.main-btn:hover{
-    transform:translateY(-2px);
-}
-
+.main-btn:hover{transform:translateY(-2px)}
 .main-btn:active{
-    transform:translateY(3px);
-    box-shadow:0 2px 0 #a9cee8;
+  transform:translateY(3px);
+  box-shadow:0 2px 0 #afd1e9;
 }
 
 .pink-btn{
-    background:var(--pink);
-    color:#b46e8d;
-    box-shadow:0 5px 0 #e8b7ca;
+  background:var(--pink);
+  color:#b16f8d;
+  box-shadow:0 5px 0 #e6b8ca;
 }
 
 .yellow-btn{
-    background:var(--yellow);
-    color:#9c8950;
-    box-shadow:0 5px 0 #dfc976;
+  background:var(--yellow);
+  color:#97854d;
+  box-shadow:0 5px 0 #dcc66e;
 }
 
-/* =========================
-   PASSWORD
-========================= */
+/* PASSWORD */
 
 #passwordPage{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:
-        radial-gradient(circle at 15% 20%,#ffe1ec 0 35px,transparent 36px),
-        radial-gradient(circle at 85% 18%,#d9ebff 0 40px,transparent 41px),
-        radial-gradient(circle at 20% 85%,#fff0b5 0 30px,transparent 31px),
-        var(--cream);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    radial-gradient(circle at 12% 18%,#ffe1ec 0 30px,transparent 31px),
+    radial-gradient(circle at 88% 18%,#d9ebff 0 35px,transparent 36px),
+    radial-gradient(circle at 18% 85%,#fff0b5 0 28px,transparent 29px),
+    var(--cream);
 }
 
-.lock-card{
-    width:min(90%,430px);
-    text-align:center;
-    padding:35px 22px;
-    background:rgba(255,255,255,.9);
-    border:4px solid #f1e3da;
-    border-radius:35px;
-    box-shadow:0 18px 45px rgba(140,120,100,.12);
+.lock{
+  width:min(90%,420px);
+  background:#fff;
+  border:4px solid #f1e5dc;
+  border-radius:35px;
+  padding:35px 22px;
+  text-align:center;
+  box-shadow:0 18px 45px #c9bca833;
 }
 
-.lock-icon{
-    font-size:65px;
-    margin-bottom:10px;
+.lock-icon{font-size:60px}
+
+.lock h1{
+  color:#83b9df;
+  font-size:32px;
+  margin:8px 0;
 }
 
-.lock-card h1{
-    color:#83b9df;
-    font-size:31px;
-    margin-bottom:8px;
+.lock p{
+  font-size:14px;
+  color:#aaa;
+  margin-bottom:20px;
 }
 
-.lock-card p{
-    font-size:14px;
-    color:#aaa1a8;
-    margin-bottom:22px;
-}
-
-.password-input{
-    width:100%;
-    border:2px solid #e9dfe1;
-    border-radius:20px;
-    padding:13px 16px;
-    outline:none;
-    text-align:center;
-    font-family:inherit;
-    font-size:16px;
-    margin-bottom:12px;
-}
-
-.password-input:focus{
-    border-color:#afd4ef;
+.password{
+  width:100%;
+  padding:13px;
+  border:2px solid #eadfe1;
+  border-radius:20px;
+  outline:0;
+  text-align:center;
+  font:inherit;
+  margin-bottom:12px;
 }
 
 .error{
-    color:#d887a5;
-    font-size:13px;
-    margin-top:13px;
-    min-height:18px;
+  min-height:18px;
+  color:#d987a5;
+  font-size:13px;
+  margin-top:10px;
 }
 
-/* =========================
-   WELCOME
-========================= */
+/* WELCOME */
 
 #welcomePage{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:
-        radial-gradient(circle at 10% 15%,#fff0b5 0 25px,transparent 26px),
-        radial-gradient(circle at 90% 25%,#d9ebff 0 30px,transparent 31px),
-        var(--cream);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
 }
 
-.welcome-card{
-    padding:30px 20px;
+.welcome{
+  width:min(92%,600px);
+  margin:auto;
 }
 
-.welcome-card .small{
-    color:#aaa;
-    font-size:14px;
+.welcome .emoji{font-size:48px}
+
+.welcome h1{
+  color:#82b9df;
+  font-size:clamp(40px,10vw,62px);
+  margin:10px 0;
 }
 
-.welcome-card h1{
-    font-size:clamp(38px,10vw,60px);
-    color:#83b9df;
-    margin:10px 0;
+.welcome .name{color:#efaac5}
+
+.welcome p{
+  line-height:1.8;
+  color:#999;
+  margin-bottom:25px;
 }
 
-.welcome-card .name{
-    color:#efaac5;
+/* TITLE */
+
+.title{
+  text-align:center;
+  margin-bottom:25px;
 }
 
-.sticker{
-    font-size:48px;
-    margin:12px;
+.title h2{
+  font:35px Pacifico,cursive;
+  color:#82b9df;
 }
 
-/* =========================
-   SECTION TITLE
-========================= */
-
-.section-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.section-title h2{
-    font-family:'Pacifico',cursive;
-    font-size:35px;
-    color:#83b9df;
-}
-
-.section-title p{
-    font-size:14px;
-    color:#aaa;
-    margin-top:5px;
+.title p{
+  font-size:14px;
+  color:#aaa;
+  margin-top:6px;
 }
 
 /* =========================
-   CAKE
+   NEW CAKE
 ========================= */
 
 .cake-area{
-    position:relative;
-    width:min(92vw,470px);
-    height:365px;
-    margin:0 auto 15px;
+  width:min(94vw,520px);
+  height:390px;
+  margin:0 auto 5px;
+  position:relative;
 }
 
-.plate{
-    position:absolute;
-    width:320px;
-    height:45px;
-    bottom:10px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#c9e8ff;
-    border:5px solid #a9d8f5;
-    border-radius:50%;
+.cake-svg{
+  width:100%;
+  height:100%;
+  overflow:visible;
 }
 
-.cake{
-    position:absolute;
-    width:285px;
-    height:180px;
-    left:50%;
-    bottom:40px;
-    transform:translateX(-50%);
+/* cake flavor */
+
+.cake-frosting{
+  fill:#fff8cf;
+  transition:.3s;
 }
 
-.cake-bottom{
-    position:absolute;
-    width:285px;
-    height:105px;
-    bottom:0;
-    left:0;
-    background:#fff0b5;
-    border:5px solid #f1d98d;
-    border-radius:15px 15px 38px 38px;
+.cake-base{
+  fill:#fff0b5;
+  transition:.3s;
+}
+
+.frosting-edge{
+  fill:#f0d98b;
 }
 
 .cake-stripe{
-    position:absolute;
-    width:285px;
-    height:35px;
-    bottom:70px;
-    left:0;
-    background:#ffe1ec;
-    border-top:5px solid #f5b8ce;
-    border-bottom:5px solid #f5b8ce;
-    z-index:3;
+  fill:#ffdce9;
 }
 
-.frosting{
-    position:absolute;
-    width:285px;
-    height:95px;
-    bottom:80px;
-    left:0;
-    background:#fffef1;
-    border:5px solid #f1d98d;
-    border-radius:50% 50% 22px 22px;
-    z-index:4;
+.plate{
+  fill:#c9e9ff;
+  stroke:#9ed2ef;
+  stroke-width:5;
 }
 
-.drip{
-    position:absolute;
-    width:38px;
-    height:45px;
-    bottom:-25px;
-    background:inherit;
-    border-bottom:5px solid currentColor;
-    border-left:5px solid currentColor;
-    border-right:5px solid currentColor;
-    border-radius:0 0 25px 25px;
-    color:#f1d98d;
+/* candles */
+
+.candle-body{
+  fill:#9fd5f4;
+  stroke:#fff;
+  stroke-width:3;
 }
 
-.drip:nth-child(1){left:28px}
-.drip:nth-child(2){left:95px;height:55px}
-.drip:nth-child(3){left:165px;height:38px}
-.drip:nth-child(4){left:225px;height:50px}
-
-.sprinkle{
-    position:absolute;
-    width:13px;
-    height:7px;
-    border-radius:10px;
-    z-index:7;
-}
-
-.s1{top:25px;left:60px;background:#8fc8ef;transform:rotate(-20deg)}
-.s2{top:45px;left:130px;background:#f4aeca;transform:rotate(20deg)}
-.s3{top:25px;right:65px;background:#ffe16b;transform:rotate(-15deg)}
-.s4{top:58px;right:105px;background:#9eddbf;transform:rotate(25deg)}
-
-.candles{
-    position:absolute;
-    z-index:10;
-    width:100%;
-    top:-55px;
-    left:0;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-}
-
-.candle{
-    position:relative;
-    width:42px;
-    height:100px;
-    border-radius:12px;
-    border:4px solid rgba(255,255,255,.5);
-    background:#a9d8f5;
-    box-shadow:inset 7px 0 rgba(255,255,255,.25);
-}
-
-.candle:nth-child(2){
-    background:#f3aeca;
-}
-
-.candle::after{
-    content:"";
-    position:absolute;
-    width:7px;
-    height:25px;
-    background:rgba(255,255,255,.8);
-    border-radius:10px;
-    left:9px;
-    top:20px;
-    transform:rotate(20deg);
+.candle-middle{
+  fill:#f1a9c7;
+  stroke:#fff;
+  stroke-width:3;
 }
 
 .flame{
-    position:absolute;
-    width:24px;
-    height:35px;
-    left:50%;
-    top:-38px;
-    transform:translateX(-50%);
-    background:#ffb94d;
-    border-radius:60% 40% 60% 40%;
-    animation:flicker .8s infinite alternate;
+  fill:#ffb84f;
+  animation:flicker .8s infinite alternate;
+  transform-origin:center bottom;
 }
 
-.flame::after{
-    content:"";
-    position:absolute;
-    width:10px;
-    height:17px;
-    background:#ffdf69;
-    border-radius:50%;
-    left:7px;
-    top:10px;
+.flame-inner{
+  fill:#ffe26b;
 }
 
 @keyframes flicker{
-    from{transform:translateX(-50%) scale(1) rotate(-3deg)}
-    to{transform:translateX(-50%) scale(1.08) rotate(4deg)}
+  from{transform:scale(1) rotate(-3deg)}
+  to{transform:scale(1.08) rotate(4deg)}
 }
 
-.toppings{
-    position:absolute;
-    inset:0;
-    z-index:8;
-    pointer-events:none;
-}
+/* topping SVG */
 
-.topping{
-    position:absolute;
-    font-size:25px;
-    animation:pop .35s ease;
+.svg-topping{
+  transform-origin:center;
+  animation:pop .3s ease;
 }
 
 @keyframes pop{
-    0%{transform:scale(0)}
-    80%{transform:scale(1.2)}
-    100%{transform:scale(1)}
+  from{opacity:0;transform:scale(0)}
+  80%{transform:scale(1.15)}
+  to{opacity:1;transform:scale(1)}
 }
 
-/* =========================
-   CONTROLS
-========================= */
+/* controls */
 
-.control-box{
-    background:rgba(255,255,255,.8);
-    border:3px solid #f1e5dc;
-    border-radius:25px;
-    padding:18px 14px;
-    margin-bottom:13px;
-    text-align:center;
+.control{
+  background:#fff;
+  border:3px solid #f0e5dc;
+  border-radius:26px;
+  padding:18px 14px;
+  margin-bottom:13px;
+  text-align:center;
 }
 
-.control-title{
-    font-weight:700;
-    margin-bottom:12px;
+.control h3{
+  margin-bottom:12px;
 }
 
 .options{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:8px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px;
 }
 
 .option{
-    border:2px solid #eadfe1;
-    background:#fff;
-    color:#817983;
-    border-radius:18px;
-    padding:9px 12px;
-    font-family:inherit;
-    font-weight:600;
-    cursor:pointer;
-    transition:.2s;
+  border:2px solid #e8dfe0;
+  background:#fff;
+  color:#7d7680;
+  border-radius:20px;
+  padding:9px 13px;
+  font-weight:600;
+  transition:.2s;
 }
 
 .option.selected{
-    background:#eaf6ff;
-    border-color:#9dccf0;
+  background:#eaf6ff;
+  border-color:#98ccec;
+  transform:translateY(-2px);
 }
 
 .topping-btn{
-    width:47px;
-    height:47px;
-    padding:0;
-    font-size:20px;
+  width:48px;
+  height:48px;
+  padding:0;
+  font-size:21px;
 }
 
-/* =========================
-   MEMORIES
-========================= */
+.hint{
+  color:#aaa;
+  font-size:12px;
+  margin-top:10px;
+}
+
+/* cards */
+
+.soft{
+  background:#fff;
+  border:3px solid #f1e5dc;
+  border-radius:28px;
+  padding:25px 20px;
+  box-shadow:0 10px 25px #a8958012;
+}
+
+/* MEMORY */
 
 .memory-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:16px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 
 .polaroid{
-    background:#fff;
-    padding:10px 10px 18px;
-    box-shadow:0 7px 15px rgba(100,100,100,.12);
-    transform:rotate(-2deg);
-    transition:.25s;
+  background:white;
+  padding:9px 9px 16px;
+  box-shadow:0 7px 16px #8882;
+  transform:rotate(-2deg);
 }
 
 .polaroid:nth-child(even){
-    transform:rotate(3deg);
-}
-
-.polaroid:hover{
-    transform:rotate(0) scale(1.03);
+  transform:rotate(3deg);
 }
 
 .polaroid img{
-    width:100%;
-    aspect-ratio:1;
-    object-fit:cover;
-    background:#eaf6ff;
-    display:block;
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  background:#d9ebff;
 }
 
 .polaroid p{
-    font-family:'Pacifico',cursive;
-    color:#999;
-    margin-top:9px;
+  font:14px Pacifico,cursive;
+  text-align:center;
+  margin-top:8px;
+  color:#999;
 }
 
-/* =========================
-   PUZZLE
-========================= */
+/* PUZZLE */
 
 .puzzle{
-    width:min(90vw,360px);
-    aspect-ratio:1;
-    margin:20px auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:3px;
-    background:#fff;
-    padding:5px;
-    border-radius:15px;
+  width:min(88vw,360px);
+  aspect-ratio:1;
+  margin:20px auto;
+  padding:5px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3px;
+  background:white;
+  border-radius:15px;
 }
 
 .piece{
-    background-image:url('images/puzzle.jpg');
-    background-size:300% 300%;
-    cursor:pointer;
-    border-radius:4px;
-    min-width:0;
+  background-image:url("images/puzzle.jpg");
+  background-size:300% 300%;
+  border-radius:4px;
+  cursor:pointer;
 }
 
 .piece.selected{
-    outline:4px solid #f2b7cd;
+  outline:4px solid #efaac5;
 }
 
-.puzzle-info{
-    text-align:center;
-    font-size:14px;
+.puzzle-text{
+  text-align:center;
+  font-size:14px;
 }
 
-/* =========================
-   TICKET
-========================= */
+/* TICKET */
 
 .ticket{
-    background:#fff;
-    border:3px dashed #efb4ca;
-    border-radius:20px;
-    padding:25px 18px;
-    position:relative;
+  background:#fff;
+  border:3px dashed #efaac5;
+  border-radius:22px;
+  padding:28px 18px;
+  text-align:center;
 }
-
-.ticket::before,
-.ticket::after{
-    content:"";
-    position:absolute;
-    width:25px;
-    height:25px;
-    background:var(--cream);
-    border-radius:50%;
-    top:50%;
-    transform:translateY(-50%);
-}
-
-.ticket::before{left:-15px}
-.ticket::after{right:-15px}
 
 .ticket h3{
-    color:#efaac5;
-    font-family:'Pacifico',cursive;
-    font-size:28px;
+  font:28px Pacifico,cursive;
+  color:#efaac5;
 }
 
 .ticket-content{
-    display:none;
-    margin-top:18px;
-    padding-top:15px;
-    border-top:2px dashed #f2d6df;
-    line-height:1.7;
+  display:none;
+  border-top:2px dashed #f1d8df;
+  margin-top:18px;
+  padding-top:18px;
+  line-height:1.8;
 }
 
 .ticket-content.show{
-    display:block;
-    animation:appear .5s ease;
+  display:block;
+  animation:appear .5s;
 }
 
-/* =========================
-   LETTER
-========================= */
+/* LETTER */
 
 .envelope{
-    text-align:center;
-    cursor:pointer;
+  text-align:center;
+  cursor:pointer;
 }
 
 .envelope-icon{
-    font-size:85px;
-    transition:.3s;
+  font-size:80px;
+  transition:.3s;
 }
 
 .envelope-icon:hover{
-    transform:translateY(-5px) rotate(2deg);
+  transform:translateY(-6px) rotate(3deg);
 }
 
 .letter{
-    display:none;
-    margin-top:20px;
-    background:#fffef8;
-    padding:25px 20px;
-    border:2px solid #f0dfbf;
-    border-radius:12px;
-    text-align:left;
-    line-height:1.8;
-    box-shadow:0 8px 20px rgba(120,100,80,.08);
+  display:none;
+  background:#fffef7;
+  border:2px solid #eadbbd;
+  border-radius:12px;
+  padding:25px 20px;
+  margin-top:20px;
+  line-height:1.8;
 }
 
 .letter.show{
-    display:block;
-    animation:appear .6s ease;
+  display:block;
+  animation:appear .5s;
 }
 
-.letter-title{
-    font-family:'Pacifico',cursive;
-    color:#83b9df;
-    text-align:center;
-    margin-bottom:15px;
+.letter h3{
+  font:26px Pacifico,cursive;
+  color:#82b9df;
+  text-align:center;
+  margin-bottom:15px;
 }
 
-/* =========================
-   GIFT
-========================= */
+/* GIFT */
 
-.gift-wrap{
-    text-align:center;
-}
+.gift-wrap{text-align:center}
 
 .gift{
-    position:relative;
-    width:190px;
-    height:155px;
-    margin:35px auto 20px;
-    cursor:pointer;
-    transition:.3s;
+  width:190px;
+  height:155px;
+  margin:35px auto 20px;
+  position:relative;
+  cursor:pointer;
+  transition:.3s;
 }
 
-.gift:hover{
-    transform:translateY(-7px);
-}
+.gift:hover{transform:translateY(-6px)}
 
 .gift-box{
-    position:absolute;
-    width:190px;
-    height:125px;
-    bottom:0;
-    background:#d9ebff;
-    border:4px solid #9fcbe9;
-    border-radius:8px;
+  position:absolute;
+  bottom:0;
+  width:190px;
+  height:125px;
+  background:#d9ebff;
+  border:4px solid #9fcbe9;
+  border-radius:8px;
 }
 
 .gift-lid{
-    position:absolute;
-    width:210px;
-    height:45px;
-    left:-10px;
-    top:10px;
-    background:#ffe1ec;
-    border:4px solid #efaac5;
-    border-radius:8px;
-    z-index:3;
-    transition:.5s;
+  position:absolute;
+  top:10px;
+  left:-10px;
+  width:210px;
+  height:45px;
+  background:#ffe1ec;
+  border:4px solid #efaac5;
+  border-radius:8px;
+  z-index:3;
+  transition:.5s;
 }
 
-.gift-ribbon-v{
-    position:absolute;
-    width:27px;
-    height:145px;
-    left:81px;
-    bottom:0;
-    background:#fff0b5;
-    z-index:2;
+.gift-ribbon{
+  position:absolute;
+  width:27px;
+  height:145px;
+  left:81px;
+  bottom:0;
+  background:#fff0b5;
+  z-index:2;
 }
 
 .gift-bow{
-    position:absolute;
-    top:-12px;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:45px;
-    z-index:5;
+  position:absolute;
+  z-index:5;
+  top:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:43px;
 }
 
 .gift.open .gift-lid{
-    transform:translateY(-75px) rotate(-5deg);
+  transform:translateY(-75px) rotate(-5deg);
 }
 
 .gift-photo{
-    display:none;
-    margin:20px auto;
-    width:min(75vw,260px);
-    border-radius:15px;
-    border:7px solid white;
-    box-shadow:0 8px 20px rgba(100,100,100,.15);
+  display:none;
+  width:min(75vw,270px);
+  margin:20px auto;
+  border:7px solid white;
+  border-radius:15px;
+  box-shadow:0 8px 20px #8883;
 }
 
 .gift-photo.show{
-    display:block;
-    animation:appear .6s ease;
+  display:block;
+  animation:appear .6s;
 }
 
-/* =========================
-   END
-========================= */
+/* END */
 
 #endPage{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
-.end-card h1{
-    color:#83b9df;
-    font-size:clamp(35px,9vw,55px);
+.end h1{
+  color:#82b9df;
+  font-size:clamp(38px,9vw,58px);
 }
 
-.end-card p{
-    margin:15px 0 25px;
-    line-height:1.7;
+.end p{
+  line-height:1.8;
+  margin:18px 0;
 }
 
-.ending-stars{
-    font-size:28px;
-    margin:15px 0;
+.music{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  width:50px;
+  height:50px;
+  border:0;
+  border-radius:50%;
+  background:white;
+  box-shadow:0 5px 20px #7773;
+  z-index:500;
+  font-size:20px;
 }
 
-/* =========================
-   MUSIC
-========================= */
-
-.music-btn{
-    position:fixed;
-    right:15px;
-    bottom:15px;
-    width:48px;
-    height:48px;
-    border:none;
-    border-radius:50%;
-    background:#fff;
-    box-shadow:0 5px 18px rgba(100,100,100,.15);
-    z-index:500;
-    cursor:pointer;
-    font-size:20px;
-}
-
-/* =========================
-   CONFETTI
-========================= */
+/* confetti */
 
 .confetti{
-    position:fixed;
-    top:-20px;
-    z-index:1000;
-    animation:fall 3.5s linear forwards;
+  position:fixed;
+  top:-20px;
+  z-index:999;
+  animation:fall 3.5s linear forwards;
 }
 
 @keyframes fall{
-    to{
-        transform:translateY(110vh) rotate(720deg);
-        opacity:0;
-    }
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
 }
 
 @keyframes appear{
-    from{
-        opacity:0;
-        transform:translateY(15px) scale(.96);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
+  from{opacity:0;transform:translateY(15px) scale(.96)}
+  to{opacity:1;transform:translateY(0) scale(1)}
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media(max-width:520px){
+  .cake-area{
+    height:350px;
+  }
 
-    .page{
-        padding-top:35px;
-    }
-
-    .cake-area{
-        transform:scale(.88);
-        transform-origin:top center;
-        margin-bottom:-35px;
-    }
-
-    .memory-grid{
-        gap:10px;
-    }
-
-    .polaroid{
-        padding:7px 7px 13px;
-    }
-
-    .polaroid p{
-        font-size:13px;
-    }
-
-    .cake,
-    .frosting,
-    .cake-stripe,
-    .cake-bottom{
-        width:250px;
-    }
-
-    .plate{
-        width:290px;
-    }
-
-    .drip:nth-child(1){left:22px}
-    .drip:nth-child(2){left:82px}
-    .drip:nth-child(3){left:145px}
-    .drip:nth-child(4){left:200px}
-
-    .candles{
-        gap:22px;
-    }
+  .memory-grid{
+    gap:10px;
+  }
 }
 </style>
 </head>
 
-
 <body>
 
-<!-- =========================
-     PASSWORD
-========================= -->
+<!-- PASSWORD -->
 
 <section id="passwordPage">
 
-    <div class="lock-card">
+  <div class="lock">
 
-        <div class="lock-icon">🔐</div>
+    <div class="lock-icon">🔐</div>
 
-        <h1 class="script">A little secret...</h1>
+    <h1 class="script">A little secret...</h1>
 
-        <p>
-            this little birthday world is only for Sheila ♡
-        </p>
+    <p>
+      this little birthday world is only for Sheila ♡
+    </p>
 
-        <input
-            id="passwordInput"
-            class="password-input"
-            type="password"
-            placeholder="enter the secret..."
-        >
+    <input
+      id="passwordInput"
+      class="password"
+      type="password"
+      placeholder="enter the secret...">
 
-        <button class="main-btn" onclick="checkPassword()">
-            OPEN ♡
-        </button>
+    <button
+      class="main-btn"
+      onclick="checkPassword()">
+      OPEN ♡
+    </button>
 
-        <div id="passwordError" class="error"></div>
+    <div id="error" class="error"></div>
 
-    </div>
+  </div>
 
 </section>
 
 
-<!-- =========================
-     WELCOME
-========================= -->
+<!-- WELCOME -->
 
 <section id="welcomePage" class="page hidden">
 
-    <div class="decor d1">⭐</div>
-    <div class="decor d2">☁️</div>
-    <div class="decor d3">🎀</div>
-    <div class="decor d4">✦</div>
+  <div class="decor d1">⭐</div>
+  <div class="decor d2">☁️</div>
+  <div class="decor d3">🎀</div>
+  <div class="decor d4">✦</div>
 
-    <div class="content welcome-card">
+  <div class="welcome">
 
-        <div class="sticker">🩵🎀🧈</div>
+    <div class="emoji">🩵🎀🧈</div>
 
-        <p class="small">
-            welcome to your little birthday world
-        </p>
+    <p>welcome to your little birthday world</p>
 
-        <h1 class="script">
-            Hello,
-            <span class="name">Sheila!</span>
-        </h1>
+    <h1 class="script">
+      Hello, <span class="name">Sheila!</span>
+    </h1>
 
-        <p style="margin:15px 0 25px;line-height:1.7;">
-            Someone made something tiny,<br>
-            silly and cute just for you ♡
-        </p>
+    <p>
+      someone made something tiny,<br>
+      silly and cute just for you ♡
+    </p>
 
-        <button
-            class="main-btn pink-btn"
-            onclick="showPage('cakePage')">
-            START THE DAY ✦
-        </button>
+    <button
+      class="main-btn pink-btn"
+      onclick="showPage('cakePage')">
+      START THE DAY ✦
+    </button>
 
-    </div>
+  </div>
 
 </section>
 
 
-<!-- =========================
-     CAKE
-========================= -->
+<!-- CAKE -->
 
 <section id="cakePage" class="page hidden">
 
-    <div class="decor d1">⭐</div>
-    <div class="decor d2">☁️</div>
-    <div class="decor d3">🎀</div>
-    <div class="decor d4">✦</div>
-
-    <div class="content">
-
-        <div class="section-title">
-            <h2>Let's make a cake! 🎂</h2>
-            <p>make your own little birthday cake ♡</p>
-        </div>
-
-
-        <div class="cake-area">
-
-            <div class="cake">
-
-                <div class="candles">
-
-                    <div class="candle">
-                        <div class="flame"></div>
-                    </div>
-
-                    <div class="candle">
-                        <div class="flame"></div>
-                    </div>
-
-                    <div class="candle">
-                        <div class="flame"></div>
-                    </div>
-
-                </div>
-
-                <div
-                    class="toppings"
-                    id="toppings">
-                </div>
-
-                <div
-                    class="frosting"
-                    id="frosting">
-
-                    <div class="drip"></div>
-                    <div class="drip"></div>
-                    <div class="drip"></div>
-                    <div class="drip"></div>
-
-                    <div class="sprinkle s1"></div>
-                    <div class="sprinkle s2"></div>
-                    <div class="sprinkle s3"></div>
-                    <div class="sprinkle s4"></div>
-
-                </div>
-
-                <div class="cake-stripe"></div>
-
-                <div class="cake-bottom"></div>
-
-            </div>
-
-            <div class="plate"></div>
-
-        </div>
-
-
-        <!-- FLAVOR -->
-
-        <div class="control-box">
-
-            <div class="control-title">
-                🍰 choose the flavor
-            </div>
-
-            <div class="options">
-
-                <button
-                    class="option flavor selected"
-                    data-color="#fffef1"
-                    data-border="#f1d98d">
-                    🤍 Vanilla
-                </button>
-
-                <button
-                    class="option flavor"
-                    data-color="#ffdce8"
-                    data-border="#f0abc4">
-                    🍓 Strawberry
-                </button>
-
-                <button
-                    class="option flavor"
-                    data-color="#bfe1fa"
-                    data-border="#8fc4e9">
-                    🫐 Blueberry
-                </button>
-
-                <button
-                    class="option flavor"
-                    data-color="#dcbfa7"
-                    data-border="#bd9879">
-                    🍫 Choco
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- TOPPING -->
-
-        <div class="control-box">
-
-            <div class="control-title">
-                🎀 add some toppings
-            </div>
-
-            <div class="options">
-
-                <button
-                    class="option topping-btn"
-                    data-topping="🍓">
-                    🍓
-                </button>
-
-                <button
-                    class="option topping-btn"
-                    data-topping="🍒">
-                    🍒
-                </button>
-
-                <button
-                    class="option topping-btn"
-                    data-topping="🌸">
-                    🌸
-                </button>
-
-                <button
-                    class="option topping-btn"
-                    data-topping="🎀">
-                    🎀
-                </button>
-
-                <button
-                    class="option topping-btn"
-                    data-topping="⭐">
-                    ⭐
-                </button>
-
-                <button
-                    class="option topping-btn"
-                    data-topping="🩵">
-                    🩵
-                </button>
-
-            </div>
-
-            <p style="font-size:12px;margin-top:10px;color:#aaa;">
-                tap again to remove ♡
-            </p>
-
-        </div>
-
-
-        <!-- CANDLE -->
-
-        <div class="control-box">
-
-            <div class="control-title">
-                🕯️ choose candle color
-            </div>
-
-            <div class="options">
-
-                <button
-                    class="option candle-color selected"
-                    data-color="#a9d8f5">
-                    🩵 Blue
-                </button>
-
-                <button
-                    class="option candle-color"
-                    data-color="#f3aeca">
-                    🎀 Pink
-                </button>
-
-                <button
-                    class="option candle-color"
-                    data-color="#ffe37d">
-                    🧈 Yellow
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div class="center">
-
-            <button
-                id="finishCake"
-                class="main-btn pink-btn">
-                MY CAKE IS READY! 🎂
-            </button>
-
-        </div>
-
-
-        <div
-            id="cakeMessage"
-            class="soft-card center hidden"
-            style="margin-top:20px;">
-
-            <h2
-                class="script"
-                style="color:#efaac5;">
-                Ta-daaa! 🎀
-            </h2>
-
-            <p style="margin:10px 0;line-height:1.7;">
-                Your cake is ready!<br>
-                Now make a little wish ♡
-            </p>
-
-            <button
-                class="main-btn yellow-btn"
-                onclick="makeWish()">
-                ✨ MAKE A WISH ✨
-            </button>
-
-        </div>
+  <div class="decor d1">⭐</div>
+  <div class="decor d2">☁️</div>
+  <div class="decor d3">🎀</div>
+  <div class="decor d4">✦</div>
+
+  <div class="content">
+
+    <div class="title">
+      <h2>Let's make a cake! 🎂</h2>
+      <p>make your own little birthday cake ♡</p>
+    </div>
+
+
+    <!-- SVG CAKE -->
+
+    <div class="cake-area">
+
+      <svg
+        class="cake-svg"
+        viewBox="0 0 520 390"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <!-- plate -->
+        <ellipse
+          class="plate"
+          cx="260"
+          cy="350"
+          rx="165"
+          ry="25"/>
+
+
+        <!-- cake base -->
+
+        <path
+          id="cakeBase"
+          class="cake-base"
+          d="
+          M125 245
+          Q125 225 145 218
+          Q260 195 375 218
+          Q395 225 395 245
+          L395 315
+          Q395 338 370 342
+          L150 342
+          Q125 338 125 315
+          Z"/>
+
+
+        <!-- cake stripe -->
+
+        <path
+          class="cake-stripe"
+          d="
+          M125 275
+          Q260 300 395 275
+          L395 292
+          Q260 317 125 292
+          Z"/>
+
+
+        <!-- frosting main -->
+
+        <path
+          id="frosting"
+          class="cake-frosting"
+          d="
+          M112 215
+          Q115 190 145 181
+          Q185 165 225 172
+          Q260 158 295 172
+          Q335 165 375 181
+          Q405 190 408 215
+          Q405 235 387 240
+          Q374 244 365 258
+          Q355 274 340 258
+          Q328 242 315 258
+          Q302 277 286 258
+          Q270 239 255 260
+          Q240 279 223 258
+          Q208 239 192 258
+          Q178 276 163 257
+          Q151 242 137 241
+          Q115 237 112 215
+          Z"/>
+
+
+        <!-- frosting lower edge -->
+
+        <path
+          id="frostingEdge"
+          class="frosting-edge"
+          d="
+          M115 220
+          Q145 235 170 228
+          Q195 220 220 231
+          Q245 242 260 232
+          Q275 242 300 231
+          Q325 220 350 228
+          Q375 235 405 220
+          L405 232
+          Q375 248 350 240
+          Q325 232 300 243
+          Q275 254 260 244
+          Q245 254 220 243
+          Q195 232 170 240
+          Q145 248 115 232
+          Z"/>
+
+
+        <!-- candles -->
+
+        <g>
+
+          <rect
+            x="182"
+            y="105"
+            width="38"
+            height="88"
+            rx="11"
+            class="candle-body"/>
+
+          <rect
+            x="241"
+            y="82"
+            width="38"
+            height="111"
+            rx="11"
+            class="candle-middle"/>
+
+          <rect
+            x="300"
+            y="105"
+            width="38"
+            height="88"
+            rx="11"
+            class="candle-body"/>
+
+
+          <!-- candle stripes -->
+
+          <path
+            d="M189 130l20-13M189 158l20-13"
+            stroke="white"
+            stroke-width="8"
+            stroke-linecap="round"
+            opacity=".75"/>
+
+          <path
+            d="M248 112l20-13M248 142l20-13M248 172l20-13"
+            stroke="white"
+            stroke-width="8"
+            stroke-linecap="round"
+            opacity=".75"/>
+
+          <path
+            d="M307 130l20-13M307 158l20-13"
+            stroke="white"
+            stroke-width="8"
+            stroke-linecap="round"
+            opacity=".75"/>
+
+
+          <!-- flames -->
+
+          <path
+            class="flame"
+            d="M201 99
+               C190 87 202 75 204 66
+               C217 80 215 91 201 99Z"/>
+
+          <path
+            class="flame"
+            d="M260 76
+               C249 64 261 50 263 40
+               C277 55 275 68 260 76Z"/>
+
+          <path
+            class="flame"
+            d="M319 99
+               C308 87 320 75 322 66
+               C335 80 333 91 319 99Z"/>
+
+        </g>
+
+
+        <!-- toppings -->
+        <g id="toppingLayer"></g>
+
+
+        <!-- little sprinkles -->
+
+        <g stroke-linecap="round" stroke-width="7">
+
+          <path d="M158 207l10-5" stroke="#8fc9ed"/>
+          <path d="M207 195l10 5" stroke="#f1a9c7"/>
+          <path d="M278 200l10-5" stroke="#ffe06b"/>
+          <path d="M330 194l10 5" stroke="#9eddbf"/>
+          <path d="M365 211l10-5" stroke="#f1a9c7"/>
+
+        </g>
+
+      </svg>
 
     </div>
+
+
+    <!-- FLAVOR -->
+
+    <div class="control">
+
+      <h3>🍰 choose the flavor</h3>
+
+      <div class="options">
+
+        <button
+          class="option flavor selected"
+          data-color="#fff8cf"
+          data-base="#fff0b5"
+          data-edge="#ead489">
+          🤍 Vanilla
+        </button>
+
+        <button
+          class="option flavor"
+          data-color="#ffdce9"
+          data-base="#ffc6da"
+          data-edge="#efabc5">
+          🍓 Strawberry
+        </button>
+
+        <button
+          class="option flavor"
+          data-color="#cce9ff"
+          data-base="#b5dcf6"
+          data-edge="#8fc4e8">
+          🫐 Blueberry
+        </button>
+
+        <button
+          class="option flavor"
+          data-color="#dfc3a9"
+          data-base="#cba989"
+          data-edge="#b58f70">
+          🍫 Choco
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- TOPPING -->
+
+    <div class="control">
+
+      <h3>🎀 add some toppings</h3>
+
+      <div class="options">
+
+        <button class="option topping-btn" data-type="cherry">🍒</button>
+        <button class="option topping-btn" data-type="strawberry">🍓</button>
+        <button class="option topping-btn" data-type="bow">🎀</button>
+        <button class="option topping-btn" data-type="heart">🩵</button>
+        <button class="option topping-btn" data-type="star">⭐</button>
+        <button class="option topping-btn" data-type="flower">🌸</button>
+
+      </div>
+
+      <p class="hint">
+        tap lagi topping yang sama untuk menghapusnya ♡
+      </p>
+
+    </div>
+
+
+    <!-- CANDLE -->
+
+    <div class="control">
+
+      <h3>🕯️ choose candle color</h3>
+
+      <div class="options">
+
+        <button
+          class="option candle-color selected"
+          data-color="#9fd5f4">
+          🩵 Blue
+        </button>
+
+        <button
+          class="option candle-color"
+          data-color="#f1a9c7">
+          🎀 Pink
+        </button>
+
+        <button
+          class="option candle-color"
+          data-color="#ffe27b">
+          🧈 Yellow
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="center">
+
+      <button
+        id="finishCake"
+        class="main-btn pink-btn">
+        MY CAKE IS READY! 🎂
+      </button>
+
+    </div>
+
+
+    <div
+      id="cakeMessage"
+      class="soft center hidden"
+      style="margin-top:20px">
+
+      <h2 class="script" style="color:#efaac5">
+        Ta-daaa! 🎀
+      </h2>
+
+      <p style="margin:10px 0;line-height:1.8">
+        Your cake is ready!<br>
+        Now make a little wish ♡
+      </p>
+
+      <button
+        class="main-btn yellow-btn"
+        onclick="makeWish()">
+        ✨ MAKE A WISH ✨
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     MEMORIES
-========================= -->
+<!-- MEMORY -->
 
 <section id="memoryPage" class="page hidden">
 
-    <div class="decor d1">⭐</div>
-    <div class="decor d2">🎀</div>
+  <div class="content">
 
-    <div class="content">
+    <div class="title">
+      <h2>Little Memories 📸</h2>
+      <p>a tiny scrapbook of you ♡</p>
+    </div>
 
-        <div class="section-title">
-            <h2>Little Memories 📸</h2>
-            <p>a tiny scrapbook of you ♡</p>
-        </div>
+    <div class="memory-grid">
 
-        <div class="memory-grid">
+      <div class="polaroid">
+        <img src="images/sheila1.jpg">
+        <p>memory no. 01 ♡</p>
+      </div>
 
-            <div class="polaroid">
-                <img src="images/sheila1.jpg" alt="Sheila">
-                <p>memory no. 01 ♡</p>
-            </div>
+      <div class="polaroid">
+        <img src="images/sheila2.jpg">
+        <p>memory no. 02 ✦</p>
+      </div>
 
-            <div class="polaroid">
-                <img src="images/sheila2.jpg" alt="Sheila">
-                <p>memory no. 02 ✦</p>
-            </div>
+      <div class="polaroid">
+        <img src="images/sheila3.jpg">
+        <p>memory no. 03 🎀</p>
+      </div>
 
-            <div class="polaroid">
-                <img src="images/sheila3.jpg" alt="Sheila">
-                <p>memory no. 03 🎀</p>
-            </div>
-
-            <div class="polaroid">
-                <img src="images/sheila4.jpg" alt="Sheila">
-                <p>memory no. 04 🩵</p>
-            </div>
-
-        </div>
-
-        <div class="center" style="margin-top:30px;">
-
-            <button
-                class="main-btn"
-                onclick="showPage('puzzlePage')">
-                NEXT → 🧩
-            </button>
-
-        </div>
+      <div class="polaroid">
+        <img src="images/sheila4.jpg">
+        <p>memory no. 04 🩵</p>
+      </div>
 
     </div>
+
+    <div class="center" style="margin-top:30px">
+
+      <button
+        class="main-btn"
+        onclick="showPage('puzzlePage')">
+        NEXT → 🧩
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     PUZZLE
-========================= -->
+<!-- PUZZLE -->
 
 <section id="puzzlePage" class="page hidden">
 
-    <div class="content">
+  <div class="content">
 
-        <div class="section-title">
+    <div class="title">
+      <h2>Piece by Piece 🧩</h2>
+      <p>put the picture back together ♡</p>
+    </div>
 
-            <h2>Piece by Piece 🧩</h2>
+    <div id="puzzle" class="puzzle"></div>
 
-            <p>
-                put the little picture back together ♡
-            </p>
+    <p id="puzzleText" class="puzzle-text">
+      tap two pieces to swap them!
+    </p>
 
-        </div>
+    <div class="center" style="margin-top:25px">
 
-        <div
-            id="puzzle"
-            class="puzzle">
-        </div>
-
-        <div class="puzzle-info">
-
-            <p id="puzzleText">
-                tap two pieces to swap them!
-            </p>
-
-        </div>
-
-        <div class="center" style="margin-top:25px;">
-
-            <button
-                id="puzzleNext"
-                class="main-btn pink-btn hidden"
-                onclick="showPage('ticketPage')">
-                PUZZLE COMPLETE! ✦
-            </button>
-
-        </div>
+      <button
+        id="puzzleNext"
+        class="main-btn pink-btn hidden"
+        onclick="showPage('ticketPage')">
+        PUZZLE COMPLETE! ✦
+      </button>
 
     </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     TICKET
-========================= -->
+<!-- TICKET -->
 
 <section id="ticketPage" class="page hidden">
 
-    <div class="content">
+  <div class="content">
 
-        <div class="section-title">
-            <h2>A Little Surprise 🎟️</h2>
-            <p>you've unlocked a tiny ticket ♡</p>
-        </div>
+    <div class="title">
+      <h2>A Little Surprise 🎟️</h2>
+      <p>you've unlocked a tiny ticket ♡</p>
+    </div>
 
-        <div class="ticket center">
+    <div class="ticket">
 
-            <h3>ONE LITTLE SURPRISE</h3>
+      <h3>ONE LITTLE SURPRISE</h3>
 
-            <p style="margin:10px 0;">
-                valid for: <b>Sheila</b>
-            </p>
+      <p style="margin:10px">
+        valid for: <b>Sheila</b>
+      </p>
 
-            <button
-                class="main-btn yellow-btn"
-                onclick="openTicket()">
-                TAP TO REVEAL
-            </button>
+      <button
+        class="main-btn yellow-btn"
+        onclick="openTicket()">
+        TAP TO REVEAL
+      </button>
 
-            <div
-                id="ticketContent"
-                class="ticket-content">
+      <div id="ticketContent" class="ticket-content">
 
-                ✨ surprise! ✨
+        ✨ surprise! ✨
 
-                <br><br>
+        <br><br>
 
-                You are officially allowed to have
-                the happiest birthday ever.
+        You are officially allowed to have
+        the happiest birthday ever.
 
-                <br>
+        <br>
 
-                And yes, this ticket is
-                <b>100% non-refundable.</b> 🎀
+        This ticket is 100% non-refundable. 🎀
 
-            </div>
-
-        </div>
-
-        <div class="center" style="margin-top:30px;">
-
-            <button
-                class="main-btn"
-                onclick="showPage('letterPage')">
-                NEXT → 💌
-            </button>
-
-        </div>
+      </div>
 
     </div>
+
+    <div class="center" style="margin-top:30px">
+
+      <button
+        class="main-btn"
+        onclick="showPage('letterPage')">
+        NEXT → 💌
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     LETTER
-========================= -->
+<!-- LETTER -->
 
 <section id="letterPage" class="page hidden">
 
-    <div class="content">
+  <div class="content">
 
-        <div class="section-title">
+    <div class="title">
+      <h2>A Letter For You 💌</h2>
+      <p>okay... this part is a little more serious ♡</p>
+    </div>
 
-            <h2>A Letter For You 💌</h2>
+    <div
+      class="soft envelope"
+      onclick="openLetter()">
 
-            <p>
-                okay... this part is a little more serious ♡
-            </p>
+      <div id="envelopeIcon" class="envelope-icon">
+        💌
+      </div>
 
-        </div>
-
-
-        <div class="soft-card envelope">
-
-            <div
-                id="envelopeIcon"
-                class="envelope-icon"
-                onclick="openLetter()">
-                💌
-            </div>
-
-            <p>
-                tap the envelope to open
-            </p>
-
-        </div>
-
-
-        <div
-            id="letter"
-            class="letter">
-
-            <h3 class="letter-title">
-                Dear Sheila ♡
-            </h3>
-
-            <p>
-                Happy birthday, Sheila!
-            </p>
-
-            <br>
-
-            <p>
-                Thank you for being a part of so many
-                little moments and memories.
-                I hope this new chapter brings you
-                lots of happiness, good things,
-                and people who genuinely care about you.
-            </p>
-
-            <br>
-
-            <p>
-                I hope you always have reasons to smile,
-                reasons to be proud of yourself,
-                and enough silly moments to make
-                ordinary days feel special.
-            </p>
-
-            <br>
-
-            <p>
-                Stay the lovely Sheila that you are. 🩵
-            </p>
-
-            <br>
-
-            <p>
-                Happy birthday once again! 🎀
-            </p>
-
-        </div>
-
-
-        <div class="center" style="margin-top:30px;">
-
-            <button
-                class="main-btn pink-btn"
-                onclick="showPage('giftPage')">
-                ONE LAST THING → 🎁
-            </button>
-
-        </div>
+      <p>tap the envelope to open</p>
 
     </div>
+
+    <div id="letter" class="letter">
+
+      <h3>Dear Sheila ♡</h3>
+
+      <p>
+        Happy birthday, Sheila!
+      </p>
+
+      <br>
+
+      <p>
+        Thank you for being part of so many
+        little moments and memories.
+        I hope this new chapter brings you
+        lots of happiness, good things,
+        and people who genuinely care about you.
+      </p>
+
+      <br>
+
+      <p>
+        I hope you always have reasons to smile,
+        reasons to be proud of yourself,
+        and enough silly moments to make
+        ordinary days feel special.
+      </p>
+
+      <br>
+
+      <p>
+        Stay the lovely Sheila that you are. 🩵
+      </p>
+
+      <br>
+
+      <p>
+        Happy birthday once again! 🎀
+      </p>
+
+    </div>
+
+    <div class="center" style="margin-top:30px">
+
+      <button
+        class="main-btn pink-btn"
+        onclick="showPage('giftPage')">
+        ONE LAST THING → 🎁
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     GIFT
-========================= -->
+<!-- GIFT -->
 
 <section id="giftPage" class="page hidden">
 
-    <div class="content">
+  <div class="content">
 
-        <div class="section-title">
+    <div class="title">
+      <h2>One Last Surprise 🎁</h2>
+      <p>there's something hiding inside...</p>
+    </div>
 
-            <h2>One Last Surprise 🎁</h2>
+    <div class="gift-wrap">
 
-            <p>
-                there's something hiding inside...
-            </p>
+      <div id="gift" class="gift" onclick="openGift()">
 
-        </div>
+        <div class="gift-bow">🎀</div>
+        <div class="gift-lid"></div>
+        <div class="gift-box"></div>
+        <div class="gift-ribbon"></div>
 
+      </div>
 
-        <div class="gift-wrap">
+      <p>tap the gift box ♡</p>
 
-            <div
-                id="gift"
-                class="gift"
-                onclick="openGift()">
+      <img
+        id="giftPhoto"
+        class="gift-photo"
+        src="images/sheila-gift.jpg">
 
-                <div class="gift-bow">
-                    🎀
-                </div>
+      <div
+        id="giftMessage"
+        class="soft hidden"
+        style="margin-top:20px">
 
-                <div class="gift-lid"></div>
+        <h2 class="script" style="color:#efaac5">
+          SURPRISE!! 🎀
+        </h2>
 
-                <div class="gift-box"></div>
+        <p style="margin-top:10px">
+          You made it all the way here! 🥹
+        </p>
 
-                <div class="gift-ribbon-v"></div>
+      </div>
 
-            </div>
-
-            <p>
-                tap the gift box ♡
-            </p>
-
-
-            <img
-                id="giftPhoto"
-                class="gift-photo"
-                src="images/sheila-gift.jpg"
-                alt="Surprise">
-
-
-            <div
-                id="giftMessage"
-                class="soft-card hidden"
-                style="margin-top:20px;">
-
-                <h2
-                    class="script"
-                    style="color:#efaac5;">
-                    SURPRISE!! 🎀
-                </h2>
-
-                <p style="margin-top:10px;line-height:1.7;">
-                    You made it all the way here! 🥹
-                </p>
-
-            </div>
-
-
-            <button
-                id="endingButton"
-                class="main-btn yellow-btn hidden"
-                style="margin-top:25px;"
-                onclick="showPage('endPage')">
-                FINISH ✨
-            </button>
-
-        </div>
+      <button
+        id="endingButton"
+        class="main-btn yellow-btn hidden"
+        style="margin-top:25px"
+        onclick="showPage('endPage')">
+        FINISH ✨
+      </button>
 
     </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     END
-========================= -->
+<!-- END -->
 
 <section id="endPage" class="page hidden">
 
-    <div class="decor d1">⭐</div>
-    <div class="decor d2">☁️</div>
-    <div class="decor d3">🎀</div>
-    <div class="decor d4">✦</div>
+  <div class="decor d1">⭐</div>
+  <div class="decor d2">☁️</div>
+  <div class="decor d3">🎀</div>
+  <div class="decor d4">✦</div>
 
-    <div class="content end-card">
+  <div class="content end">
 
-        <div class="ending-stars">
-            ✦ ♡ ✦
-        </div>
+    <div style="font-size:28px">✦ ♡ ✦</div>
 
-        <h1 class="script">
-            Happy Birthday,
-            Sheila! 🩵
-        </h1>
+    <h1 class="script">
+      Happy Birthday,<br>
+      Sheila! 🩵
+    </h1>
 
-        <p>
-            I hope your day is filled with
-            happy little moments,
-            lovely memories,
-            and lots of reasons to smile.
-        </p>
+    <p>
+      I hope your day is filled with happy
+      little moments, lovely memories,
+      and lots of reasons to smile.
+    </p>
 
-        <div class="ending-stars">
-            🎀 🧈 🩵
-        </div>
-
-        <p class="script" style="color:#efaac5;">
-            made with a little bit of love ♡
-        </p>
-
+    <div style="font-size:28px">
+      🎀 🧈 🩵
     </div>
+
+    <p class="script" style="color:#efaac5">
+      made with a little bit of love ♡
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     MUSIC
-========================= -->
+<!-- MUSIC -->
 
-<audio
-    id="bgMusic"
-    loop>
-    <source
-        src="music/sheila-song.mp3"
-        type="audio/mpeg">
+<audio id="music" loop>
+  <source src="music/sheila-song.mp3" type="audio/mpeg">
 </audio>
 
-<button
-    id="musicButton"
-    class="music-btn"
-    onclick="toggleMusic()">
-    🎵
+<button id="musicBtn" class="music" onclick="toggleMusic()">
+  🎵
 </button>
 
 
 <script>
 
-/* =========================
-   PASSWORD
-========================= */
+/* PASSWORD */
 
-/*
-   GANTI PASSWORD DI SINI
-*/
-
-const SECRET_PASSWORD = "1909";
-
+const PASSWORD = "1909";
 
 function checkPassword(){
 
-    const input =
-        document.getElementById("passwordInput");
+  const input =
+    document.getElementById("passwordInput");
 
-    const error =
-        document.getElementById("passwordError");
+  const error =
+    document.getElementById("error");
 
-    if(input.value === SECRET_PASSWORD){
+  if(input.value === PASSWORD){
 
-        document
-            .getElementById("passwordPage")
-            .classList.add("hidden");
+    document
+      .getElementById("passwordPage")
+      .classList.add("hidden");
 
-        document
-            .getElementById("welcomePage")
-            .classList.remove("hidden");
+    document
+      .getElementById("welcomePage")
+      .classList.remove("hidden");
 
-        startMusic();
+    startMusic();
 
-    }else{
+  }else{
 
-        error.textContent =
-            "hmm... bukan itu 👀 coba lagi ♡";
+    error.textContent =
+      "hmm... bukan itu 👀 coba lagi ♡";
 
-        input.value = "";
+    input.value="";
 
-    }
-
+  }
 }
-
-
-/* ENTER KEY */
 
 document
-    .getElementById("passwordInput")
-    .addEventListener("keydown",function(e){
-
-        if(e.key === "Enter"){
-            checkPassword();
-        }
-
-    });
+  .getElementById("passwordInput")
+  .addEventListener("keydown",e=>{
+    if(e.key==="Enter") checkPassword();
+  });
 
 
-/* =========================
-   PAGE NAVIGATION
-========================= */
+/* NAVIGATION */
 
-function showPage(pageId){
+function showPage(id){
 
-    const pages = document.querySelectorAll(".page");
+  document
+    .querySelectorAll(".page")
+    .forEach(p=>p.classList.add("hidden"));
 
-    pages.forEach(page=>{
-        page.classList.add("hidden");
-    });
+  document
+    .getElementById(id)
+    .classList.remove("hidden");
 
-    const target =
-        document.getElementById(pageId);
-
-    target.classList.remove("hidden");
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 }
 
 
-/* =========================
-   MUSIC
-========================= */
+/* MUSIC */
 
 const music =
-    document.getElementById("bgMusic");
+  document.getElementById("music");
 
-const musicButton =
-    document.getElementById("musicButton");
-
-let musicPlaying = false;
-
+const musicBtn =
+  document.getElementById("musicBtn");
 
 function startMusic(){
 
-    music.play()
-        .then(()=>{
-            musicPlaying = true;
-            musicButton.textContent = "🎵";
-        })
-        .catch(()=>{
-            musicPlaying = false;
-            musicButton.textContent = "🔇";
-        });
+  music.play()
+    .then(()=>{
+      musicBtn.textContent="🎵";
+    })
+    .catch(()=>{
+      musicBtn.textContent="🔇";
+    });
 
 }
 
-
 function toggleMusic(){
 
-    if(music.paused){
+  if(music.paused){
 
-        music.play();
+    music.play();
+    musicBtn.textContent="🎵";
 
-        musicPlaying = true;
+  }else{
 
-        musicButton.textContent = "🎵";
+    music.pause();
+    musicBtn.textContent="🔇";
 
-    }else{
-
-        music.pause();
-
-        musicPlaying = false;
-
-        musicButton.textContent = "🔇";
-
-    }
+  }
 
 }
 
@@ -1730,465 +1469,521 @@ function toggleMusic(){
 ========================= */
 
 const frosting =
-    document.getElementById("frosting");
+  document.getElementById("frosting");
 
-const flavors =
-    document.querySelectorAll(".flavor");
+const cakeBase =
+  document.getElementById("cakeBase");
 
-flavors.forEach(button=>{
+const frostingEdge =
+  document.getElementById("frostingEdge");
 
-    button.addEventListener("click",()=>{
+document
+  .querySelectorAll(".flavor")
+  .forEach(btn=>{
 
-        flavors.forEach(b=>
-            b.classList.remove("selected")
-        );
+    btn.addEventListener("click",()=>{
 
-        button.classList.add("selected");
+      document
+        .querySelectorAll(".flavor")
+        .forEach(x=>x.classList.remove("selected"));
 
-        const color =
-            button.dataset.color;
+      btn.classList.add("selected");
 
-        const border =
-            button.dataset.border;
+      frosting.style.fill =
+        btn.dataset.color;
 
-        frosting.style.background = color;
+      cakeBase.style.fill =
+        btn.dataset.base;
 
-        frosting.style.borderColor = border;
-
-        document
-            .querySelectorAll(".drip")
-            .forEach(drip=>{
-                drip.style.background = color;
-                drip.style.color = border;
-            });
+      frostingEdge.style.fill =
+        btn.dataset.edge;
 
     });
 
-});
+  });
 
 
 /* =========================
    TOPPINGS
 ========================= */
 
+const toppingLayer =
+  document.getElementById("toppingLayer");
+
 const toppingButtons =
-    document.querySelectorAll(".topping-btn");
+  document.querySelectorAll(".topping-btn");
 
-const toppingContainer =
-    document.getElementById("toppings");
-
-let activeToppings = {};
-
-const toppingPositions = [
-
-    {left:"55px",top:"15px"},
-    {left:"110px",top:"38px"},
-    {left:"170px",top:"15px"},
-    {left:"215px",top:"45px"},
-    {left:"85px",top:"62px"},
-    {left:"145px",top:"60px"}
-
-];
+let activeToppings={};
 
 
-toppingButtons.forEach((button,index)=>{
+/*
+   Posisi topping dibuat di
+   PERMUKAAN atas kue.
+*/
 
-    button.addEventListener("click",()=>{
+const positions={
+  cherry:[150,185],
+  strawberry:[215,178],
+  bow:[345,185],
+  heart:[280,188],
+  star:[315,205],
+  flower:[185,207]
+};
 
-        const emoji =
-            button.dataset.topping;
+
+function makeTopping(type){
+
+  const [x,y]=positions[type];
+
+  const g =
+    document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "g"
+    );
+
+  g.classList.add("svg-topping");
+
+  g.setAttribute(
+    "transform",
+    `translate(${x} ${y})`
+  );
 
 
-        if(activeToppings[index]){
+  if(type==="cherry"){
 
-            activeToppings[index].remove();
+    g.innerHTML=`
 
-            delete activeToppings[index];
+      <path
+        d="M0 5 Q8 -20 18 -25"
+        fill="none"
+        stroke="#6da957"
+        stroke-width="4"
+        stroke-linecap="round"/>
 
-            button.classList.remove("selected");
+      <circle cx="-5" cy="9" r="10" fill="#e94f62"/>
+      <circle cx="12" cy="6" r="10" fill="#e94f62"/>
 
-        }else{
+      <circle cx="-8" cy="5" r="3" fill="#ffb1b9"/>
+      <circle cx="9" cy="2" r="3" fill="#ffb1b9"/>
 
-            const topping =
-                document.createElement("div");
+    `;
 
-            topping.className = "topping";
+  }
 
-            topping.textContent = emoji;
 
-            topping.style.left =
-                toppingPositions[index].left;
+  if(type==="strawberry"){
 
-            topping.style.top =
-                toppingPositions[index].top;
+    g.innerHTML=`
 
-            toppingContainer.appendChild(topping);
+      <path
+        d="M0 -8 Q10 -20 20 -8"
+        fill="none"
+        stroke="#6ca65b"
+        stroke-width="4"/>
 
-            activeToppings[index] =
-                topping;
+      <path
+        d="M-3 -5
+           Q10 -15 23 -5
+           Q20 17 10 22
+           Q0 17 -3 -5Z"
+        fill="#f36d7e"/>
 
-            button.classList.add("selected");
+      <circle cx="5" cy="2" r="1.8" fill="#fff4bf"/>
+      <circle cx="14" cy="1" r="1.8" fill="#fff4bf"/>
+      <circle cx="10" cy="10" r="1.8" fill="#fff4bf"/>
 
-        }
+    `;
 
-    });
+  }
+
+
+  if(type==="bow"){
+
+    g.innerHTML=`
+
+      <path
+        d="M0 0
+           C-30 -22 -38 5 -3 8
+           C-38 30 -15 34 4 7Z"
+        fill="#f28cab"/>
+
+      <path
+        d="M5 5
+           C35 -22 42 5 9 9
+           C40 29 18 34 3 9Z"
+        fill="#f28cab"/>
+
+      <circle
+        cx="4"
+        cy="7"
+        r="7"
+        fill="#d96f94"/>
+
+    `;
+
+  }
+
+
+  if(type==="heart"){
+
+    g.innerHTML=`
+
+      <path
+        d="M0 7
+           C-20 -10 -10 -24 0 -13
+           C10 -24 20 -10 0 7Z"
+        fill="#76c9ef"/>
+
+      <path
+        d="M-7 -9
+           Q-3 -15 2 -13"
+        fill="none"
+        stroke="#bce8ff"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+    `;
+
+  }
+
+
+  if(type==="star"){
+
+    g.innerHTML=`
+
+      <path
+        d="M0 -17
+           L5 -5
+           L18 -5
+           L8 3
+           L12 16
+           L0 9
+           L-12 16
+           L-8 3
+           L-18 -5
+           L-5 -5Z"
+        fill="#ffe16b"/>
+
+    `;
+
+  }
+
+
+  if(type==="flower"){
+
+    g.innerHTML=`
+
+      <circle cx="0" cy="-9" r="8" fill="#f4aeca"/>
+      <circle cx="9" cy="0" r="8" fill="#f4aeca"/>
+      <circle cx="0" cy="9" r="8" fill="#f4aeca"/>
+      <circle cx="-9" cy="0" r="8" fill="#f4aeca"/>
+      <circle cx="0" cy="0" r="6" fill="#ffe27b"/>
+
+    `;
+
+  }
+
+  return g;
+
+}
+
+
+toppingButtons.forEach(btn=>{
+
+  btn.addEventListener("click",()=>{
+
+    const type=btn.dataset.type;
+
+    if(activeToppings[type]){
+
+      activeToppings[type].remove();
+
+      delete activeToppings[type];
+
+      btn.classList.remove("selected");
+
+    }else{
+
+      const topping=makeTopping(type);
+
+      toppingLayer.appendChild(topping);
+
+      activeToppings[type]=topping;
+
+      btn.classList.add("selected");
+
+    }
+
+  });
 
 });
 
 
-/* =========================
-   CANDLE
-========================= */
+/* CANDLE COLORS */
 
-const candleButtons =
-    document.querySelectorAll(".candle-color");
+document
+  .querySelectorAll(".candle-color")
+  .forEach(btn=>{
 
-const candles =
-    document.querySelectorAll(".candle");
+    btn.addEventListener("click",()=>{
 
-candleButtons.forEach(button=>{
+      document
+        .querySelectorAll(".candle-color")
+        .forEach(x=>x.classList.remove("selected"));
 
-    button.addEventListener("click",()=>{
+      btn.classList.add("selected");
 
-        candleButtons.forEach(b=>
-            b.classList.remove("selected")
-        );
-
-        button.classList.add("selected");
-
-        candles.forEach(candle=>{
-            candle.style.background =
-                button.dataset.color;
+      document
+        .querySelectorAll(".candle-body,.candle-middle")
+        .forEach(c=>{
+          c.style.fill=btn.dataset.color;
         });
 
     });
 
-});
+  });
 
 
-/* =========================
-   CAKE FINISH
-========================= */
+/* CAKE COMPLETE */
 
 document
-    .getElementById("finishCake")
-    .addEventListener("click",()=>{
+  .getElementById("finishCake")
+  .addEventListener("click",()=>{
 
-        document
-            .getElementById("cakeMessage")
-            .classList.remove("hidden");
-
-        createConfetti();
-
-        document
-            .getElementById("finishCake")
-            .textContent =
-            "CAKE COMPLETED! 🎀";
-
-    });
-
-
-/* =========================
-   MAKE WISH
-========================= */
-
-function makeWish(){
-
-    candles.forEach(candle=>{
-
-        const flame =
-            candle.querySelector(".flame");
-
-        flame.style.display = "none";
-
-    });
+    document
+      .getElementById("cakeMessage")
+      .classList.remove("hidden");
 
     createConfetti();
 
-    setTimeout(()=>{
+  });
 
-        showPage("memoryPage");
 
-    },1800);
+/* WISH */
+
+function makeWish(){
+
+  document
+    .querySelectorAll(".flame")
+    .forEach(f=>f.style.display="none");
+
+  createConfetti();
+
+  setTimeout(()=>{
+    showPage("memoryPage");
+  },1500);
 
 }
 
 
-/* =========================
-   CONFETTI
-========================= */
+/* CONFETTI */
 
 function createConfetti(){
 
-    const emojis = [
-        "🩵",
-        "🎀",
-        "💛",
-        "⭐",
-        "🌸",
-        "✦"
-    ];
+  const stuff=[
+    "🩵","🎀","💛","⭐","🌸","✦"
+  ];
 
-    for(let i=0;i<45;i++){
+  for(let i=0;i<45;i++){
 
-        const confetti =
-            document.createElement("div");
+    const el=document.createElement("div");
 
-        confetti.className =
-            "confetti";
+    el.className="confetti";
 
-        confetti.textContent =
-            emojis[
-                Math.floor(
-                    Math.random()*emojis.length
-                )
-            ];
+    el.textContent=
+      stuff[Math.floor(Math.random()*stuff.length)];
 
-        confetti.style.left =
-            Math.random()*100+"vw";
+    el.style.left=
+      Math.random()*100+"vw";
 
-        confetti.style.fontSize =
-            12+Math.random()*13+"px";
+    el.style.fontSize=
+      12+Math.random()*12+"px";
 
-        confetti.style.animationDelay =
-            Math.random()*1.5+"s";
+    el.style.animationDelay=
+      Math.random()*1.4+"s";
 
-        document.body.appendChild(confetti);
+    document.body.appendChild(el);
 
-        setTimeout(()=>{
-            confetti.remove();
-        },4000);
+    setTimeout(()=>el.remove(),4000);
 
-    }
+  }
 
 }
 
 
-/* =========================
-   PUZZLE
-========================= */
+/* PUZZLE */
 
-const puzzle =
-    document.getElementById("puzzle");
+const puzzle=
+  document.getElementById("puzzle");
 
-let puzzleOrder =
-    [0,1,2,3,4,5,6,7,8];
+let order=[0,1,2,3,4,5,6,7,8];
 
-let firstPiece = null;
-let secondPiece = null;
+let first=null;
 
 
-/*
-   SET BACKGROUND POSITION
-*/
+function shuffle(){
 
-function createPuzzle(){
+  for(let i=order.length-1;i>0;i--){
 
-    puzzle.innerHTML = "";
+    const j=
+      Math.floor(Math.random()*(i+1));
 
-    puzzleOrder.forEach((original,index)=>{
+    [order[i],order[j]]=
+      [order[j],order[i]];
 
-        const piece =
-            document.createElement("div");
-
-        piece.className = "piece";
-
-        const row =
-            Math.floor(original/3);
-
-        const col =
-            original%3;
-
-        piece.style.backgroundPosition =
-            `${col*50}% ${row*50}%`;
-
-        piece.dataset.index = index;
-
-        piece.addEventListener(
-            "click",
-            ()=>selectPiece(piece)
-        );
-
-        puzzle.appendChild(piece);
-
-    });
+  }
 
 }
 
 
-function shufflePuzzle(){
+function renderPuzzle(){
 
-    for(let i=puzzleOrder.length-1;i>0;i--){
+  puzzle.innerHTML="";
 
-        const j =
-            Math.floor(Math.random()*(i+1));
+  order.forEach((original,index)=>{
 
-        [
-            puzzleOrder[i],
-            puzzleOrder[j]
-        ] =
-        [
-            puzzleOrder[j],
-            puzzleOrder[i]
-        ];
+    const piece=
+      document.createElement("div");
 
-    }
+    piece.className="piece";
+
+    const row=
+      Math.floor(original/3);
+
+    const col=
+      original%3;
+
+    piece.style.backgroundPosition=
+      `${col*50}% ${row*50}%`;
+
+    piece.dataset.index=index;
+
+    piece.onclick=()=>selectPiece(piece);
+
+    puzzle.appendChild(piece);
+
+  });
 
 }
 
 
 function selectPiece(piece){
 
-    if(!firstPiece){
+  if(!first){
 
-        firstPiece = piece;
+    first=piece;
+    piece.classList.add("selected");
+    return;
 
-        piece.classList.add("selected");
+  }
 
-        return;
-    }
+  if(first===piece){
 
+    piece.classList.remove("selected");
+    first=null;
+    return;
 
-    if(firstPiece === piece){
+  }
 
-        piece.classList.remove("selected");
+  const a=Number(first.dataset.index);
+  const b=Number(piece.dataset.index);
 
-        firstPiece = null;
+  [order[a],order[b]]=
+    [order[b],order[a]];
 
-        return;
-    }
+  first=null;
 
+  renderPuzzle();
 
-    secondPiece = piece;
-
-    const firstIndex =
-        Number(firstPiece.dataset.index);
-
-    const secondIndex =
-        Number(secondPiece.dataset.index);
-
-
-    [
-        puzzleOrder[firstIndex],
-        puzzleOrder[secondIndex]
-    ] =
-    [
-        puzzleOrder[secondIndex],
-        puzzleOrder[firstIndex]
-    ];
-
-
-    firstPiece.classList.remove("selected");
-
-    firstPiece = null;
-    secondPiece = null;
-
-    createPuzzle();
-
-    checkPuzzle();
+  checkPuzzle();
 
 }
 
 
 function checkPuzzle(){
 
-    const solved =
-        puzzleOrder.every(
-            (value,index)=>
-                value === index
-        );
+  const solved=
+    order.every((v,i)=>v===i);
 
-    if(solved){
-
-        document
-            .getElementById("puzzleText")
-            .textContent =
-            "YOU DID IT!! 🥹🎀";
-
-        document
-            .getElementById("puzzleNext")
-            .classList.remove("hidden");
-
-        createConfetti();
-
-    }
-
-}
-
-
-shufflePuzzle();
-
-createPuzzle();
-
-
-/* =========================
-   TICKET
-========================= */
-
-function openTicket(){
+  if(solved){
 
     document
-        .getElementById("ticketContent")
-        .classList.add("show");
+      .getElementById("puzzleText")
+      .textContent=
+      "YOU DID IT!! 🥹🎀";
+
+    document
+      .getElementById("puzzleNext")
+      .classList.remove("hidden");
 
     createConfetti();
 
+  }
+
+}
+
+shuffle();
+renderPuzzle();
+
+
+/* TICKET */
+
+function openTicket(){
+
+  document
+    .getElementById("ticketContent")
+    .classList.add("show");
+
+  createConfetti();
+
 }
 
 
-/* =========================
-   LETTER
-========================= */
+/* LETTER */
 
 function openLetter(){
 
-    document
-        .getElementById("letter")
-        .classList.add("show");
+  document
+    .getElementById("letter")
+    .classList.add("show");
 
-    document
-        .getElementById("envelopeIcon")
-        .textContent = "💌✨";
+  document
+    .getElementById("envelopeIcon")
+    .textContent="💌✨";
 
 }
 
 
-/* =========================
-   GIFT
-========================= */
+/* GIFT */
 
 function openGift(){
 
-    const gift =
-        document.getElementById("gift");
+  const gift=
+    document.getElementById("gift");
 
-    const photo =
-        document.getElementById("giftPhoto");
+  gift.classList.add("open");
 
-    const message =
-        document.getElementById("giftMessage");
+  setTimeout(()=>{
 
-    const endingButton =
-        document.getElementById("endingButton");
+    document
+      .getElementById("giftPhoto")
+      .classList.add("show");
 
+    document
+      .getElementById("giftMessage")
+      .classList.remove("hidden");
 
-    gift.classList.add("open");
+    document
+      .getElementById("endingButton")
+      .classList.remove("hidden");
 
-    setTimeout(()=>{
+    createConfetti();
 
-        photo.classList.add("show");
-
-        message.classList.remove("hidden");
-
-        endingButton.classList.remove("hidden");
-
-        createConfetti();
-
-    },600);
+  },600);
 
 }
 
 </script>
 
 </body>
-  </html>
+        </html>
