@@ -84,6 +84,7 @@ button{
 }
 
 .main-btn:hover{transform:translateY(-2px)}
+
 .main-btn:active{
   transform:translateY(3px);
   box-shadow:0 2px 0 #afd1e9;
@@ -205,9 +206,7 @@ button{
   margin-top:6px;
 }
 
-/* =========================
-   NEW CAKE
-========================= */
+/* CAKE */
 
 .cake-area{
   width:min(94vw,520px);
@@ -221,8 +220,6 @@ button{
   height:100%;
   overflow:visible;
 }
-
-/* cake flavor */
 
 .cake-frosting{
   fill:#fff8cf;
@@ -248,8 +245,6 @@ button{
   stroke-width:5;
 }
 
-/* candles */
-
 .candle-body{
   fill:#9fd5f4;
   stroke:#fff;
@@ -268,16 +263,10 @@ button{
   transform-origin:center bottom;
 }
 
-.flame-inner{
-  fill:#ffe26b;
-}
-
 @keyframes flicker{
   from{transform:scale(1) rotate(-3deg)}
   to{transform:scale(1.08) rotate(4deg)}
 }
-
-/* topping SVG */
 
 .svg-topping{
   transform-origin:center;
@@ -289,8 +278,6 @@ button{
   80%{transform:scale(1.15)}
   to{opacity:1;transform:scale(1)}
 }
-
-/* controls */
 
 .control{
   background:#fff;
@@ -340,8 +327,6 @@ button{
   font-size:12px;
   margin-top:10px;
 }
-
-/* cards */
 
 .soft{
   background:#fff;
@@ -399,7 +384,7 @@ button{
 }
 
 .piece{
-  background-image:url("images/puzzle.jpg");
+  background-image:url("IMG-20261001-WA0014.jpg");
   background-size:300% 300%;
   border-radius:4px;
   cursor:pointer;
@@ -588,7 +573,7 @@ button{
   font-size:20px;
 }
 
-/* confetti */
+/* CONFETTI */
 
 .confetti{
   position:fixed;
@@ -605,11 +590,18 @@ button{
 }
 
 @keyframes appear{
-  from{opacity:0;transform:translateY(15px) scale(.96)}
-  to{opacity:1;transform:translateY(0) scale(1)}
+  from{
+    opacity:0;
+    transform:translateY(15px) scale(.96);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
 }
 
 @media(max-width:520px){
+
   .cake-area{
     height:350px;
   }
@@ -617,6 +609,7 @@ button{
   .memory-grid{
     gap:10px;
   }
+
 }
 </style>
 </head>
@@ -707,9 +700,6 @@ button{
       <p>make your own little birthday cake ♡</p>
     </div>
 
-
-    <!-- SVG CAKE -->
-
     <div class="cake-area">
 
       <svg
@@ -717,16 +707,12 @@ button{
         viewBox="0 0 520 390"
         xmlns="http://www.w3.org/2000/svg">
 
-        <!-- plate -->
         <ellipse
           class="plate"
           cx="260"
           cy="350"
           rx="165"
           ry="25"/>
-
-
-        <!-- cake base -->
 
         <path
           id="cakeBase"
@@ -742,9 +728,6 @@ button{
           Q125 338 125 315
           Z"/>
 
-
-        <!-- cake stripe -->
-
         <path
           class="cake-stripe"
           d="
@@ -753,9 +736,6 @@ button{
           L395 292
           Q260 317 125 292
           Z"/>
-
-
-        <!-- frosting main -->
 
         <path
           id="frosting"
@@ -780,9 +760,6 @@ button{
           Q115 237 112 215
           Z"/>
 
-
-        <!-- frosting lower edge -->
-
         <path
           id="frostingEdge"
           class="frosting-edge"
@@ -802,9 +779,6 @@ button{
           Q195 232 170 240
           Q145 248 115 232
           Z"/>
-
-
-        <!-- candles -->
 
         <g>
 
@@ -832,9 +806,6 @@ button{
             rx="11"
             class="candle-body"/>
 
-
-          <!-- candle stripes -->
-
           <path
             d="M189 130l20-13M189 158l20-13"
             stroke="white"
@@ -856,9 +827,6 @@ button{
             stroke-linecap="round"
             opacity=".75"/>
 
-
-          <!-- flames -->
-
           <path
             class="flame"
             d="M201 99
@@ -879,12 +847,7 @@ button{
 
         </g>
 
-
-        <!-- toppings -->
         <g id="toppingLayer"></g>
-
-
-        <!-- little sprinkles -->
 
         <g stroke-linecap="round" stroke-width="7">
 
@@ -900,8 +863,6 @@ button{
 
     </div>
 
-
-    <!-- FLAVOR -->
 
     <div class="control">
 
@@ -946,8 +907,6 @@ button{
     </div>
 
 
-    <!-- TOPPING -->
-
     <div class="control">
 
       <h3>🎀 add some toppings</h3>
@@ -969,8 +928,6 @@ button{
 
     </div>
 
-
-    <!-- CANDLE -->
 
     <div class="control">
 
@@ -1053,23 +1010,18 @@ button{
     <div class="memory-grid">
 
       <div class="polaroid">
-        <img src="images/sheila1.jpg">
+        <img src="IMG-20261001-WA0016.jpg">
         <p>memory no. 01 ♡</p>
       </div>
 
       <div class="polaroid">
-        <img src="images/sheila2.jpg">
+        <img src="IMG-20261001-WA0015.jpg">
         <p>memory no. 02 ✦</p>
       </div>
 
       <div class="polaroid">
-        <img src="images/sheila3.jpg">
+        <img src="IMG-20261001-WA0014.jpg">
         <p>memory no. 03 🎀</p>
-      </div>
-
-      <div class="polaroid">
-        <img src="images/sheila4.jpg">
-        <p>memory no. 04 🩵</p>
       </div>
 
     </div>
@@ -1285,7 +1237,7 @@ button{
       <img
         id="giftPhoto"
         class="gift-photo"
-        src="images/sheila-gift.jpg">
+        src="IMG-20261001-WA0014.jpg">
 
       <div
         id="giftMessage"
@@ -1357,10 +1309,15 @@ button{
 <!-- MUSIC -->
 
 <audio id="music" loop>
-  <source src="music/sheila-song.mp3" type="audio/mpeg">
+  <source
+    src="SpotiDown.App - Lucky Girl Syndrome - ILLIT.mp3"
+    type="audio/mpeg">
 </audio>
 
-<button id="musicBtn" class="music" onclick="toggleMusic()">
+<button
+  id="musicBtn"
+  class="music"
+  onclick="toggleMusic()">
   🎵
 </button>
 
@@ -1369,7 +1326,7 @@ button{
 
 /* PASSWORD */
 
-const PASSWORD = "1909";
+const PASSWORD = "01102010";
 
 function checkPassword(){
 
@@ -1399,6 +1356,7 @@ function checkPassword(){
     input.value="";
 
   }
+
 }
 
 document
@@ -1424,6 +1382,7 @@ function showPage(id){
     top:0,
     behavior:"smooth"
   });
+
 }
 
 
@@ -1452,11 +1411,13 @@ function toggleMusic(){
   if(music.paused){
 
     music.play();
+
     musicBtn.textContent="🎵";
 
   }else{
 
     music.pause();
+
     musicBtn.textContent="🔇";
 
   }
@@ -1464,9 +1425,7 @@ function toggleMusic(){
 }
 
 
-/* =========================
-   CAKE FLAVOR
-========================= */
+/* CAKE FLAVOR */
 
 const frosting =
   document.getElementById("frosting");
@@ -1503,9 +1462,7 @@ document
   });
 
 
-/* =========================
-   TOPPINGS
-========================= */
+/* TOPPINGS */
 
 const toppingLayer =
   document.getElementById("toppingLayer");
@@ -1514,12 +1471,6 @@ const toppingButtons =
   document.querySelectorAll(".topping-btn");
 
 let activeToppings={};
-
-
-/*
-   Posisi topping dibuat di
-   PERMUKAAN atas kue.
-*/
 
 const positions={
   cherry:[150,185],
@@ -1872,7 +1823,9 @@ function selectPiece(piece){
   if(!first){
 
     first=piece;
+
     piece.classList.add("selected");
+
     return;
 
   }
@@ -1880,7 +1833,9 @@ function selectPiece(piece){
   if(first===piece){
 
     piece.classList.remove("selected");
+
     first=null;
+
     return;
 
   }
