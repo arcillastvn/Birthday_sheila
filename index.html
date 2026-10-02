@@ -1,2495 +1,1749 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Sheila ♡</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Pacifico&display=swap');
 
 :root{
-  --cream:#fffaf0;
-  --blue:#d8edff;
-  --blue2:#91c9ef;
-  --pink:#ffdce9;
-  --pink2:#efa8c5;
-  --yellow:#fff0a9;
-  --yellow2:#e5ca69;
-  --text:#77727a;
+    --cream:#fffaf0;
+    --blue:#d8edff;
+    --blue2:#91c9ef;
+    --pink:#ffdce9;
+    --pink2:#efa8c5;
+    --yellow:#fff0a9;
+    --yellow2:#e5ca69;
+    --text:#77727a;
+    --white:#ffffff;
 }
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-  font-family:Quicksand,sans-serif;
-  background:var(--cream);
-  color:var(--text);
-  overflow-x:hidden;
+    background:var(--cream);
+    color:var(--text);
+    font-family:'Quicksand',sans-serif;
+    overflow-x:hidden;
 }
 
 button{
-  font-family:inherit;
-  cursor:pointer;
-}
-
-.hidden{
-  display:none!important;
+    font-family:'Quicksand',sans-serif;
+    border:none;
+    cursor:pointer;
 }
 
 .page{
-  min-height:100vh;
-  padding:40px 18px 70px;
-  position:relative;
-  overflow:hidden;
+    min-height:100vh;
+    display:none;
+    padding:35px 20px;
+    position:relative;
+    overflow:hidden;
 }
 
-.content{
-  width:min(92%,700px);
-  margin:auto;
-  position:relative;
-  z-index:2;
+.page.active{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.script{
-  font-family:Pacifico,cursive;
+.container{
+    width:100%;
+    max-width:850px;
+    text-align:center;
+    position:relative;
+    z-index:2;
 }
 
-.center{
-  text-align:center;
+h1{
+    font-family:'Pacifico',cursive;
+    font-weight:400;
+    color:#7d9fbc;
+    font-size:clamp(38px,8vw,65px);
+    margin-bottom:12px;
 }
+
+h2{
+    font-family:'Pacifico',cursive;
+    font-weight:400;
+    color:#d18eaa;
+    font-size:clamp(30px,7vw,48px);
+    margin-bottom:12px;
+}
+
+p{
+    line-height:1.7;
+}
+
+.subtitle{
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+/* DECORATIONS */
 
 .decor{
-  position:absolute;
-  z-index:1;
-  pointer-events:none;
-  animation:float 4s ease-in-out infinite;
+    position:absolute;
+    font-size:30px;
+    opacity:.8;
+    animation:float 4s ease-in-out infinite;
 }
 
-.d1{
-  top:7%;
-  left:7%;
-  font-size:32px;
-}
-
-.d2{
-  top:14%;
-  right:7%;
-  font-size:32px;
-  animation-delay:.7s;
-}
-
-.d3{
-  bottom:12%;
-  left:7%;
-  font-size:28px;
-  animation-delay:1.3s;
-}
-
-.d4{
-  bottom:14%;
-  right:8%;
-  font-size:27px;
-  animation-delay:2s;
-}
+.decor:nth-child(1){top:8%;left:8%}
+.decor:nth-child(2){top:15%;right:9%;animation-delay:1s}
+.decor:nth-child(3){bottom:12%;left:12%;animation-delay:2s}
+.decor:nth-child(4){bottom:18%;right:10%;animation-delay:1.5s}
 
 @keyframes float{
-  0%,100%{
-    transform:translateY(0) rotate(-4deg);
-  }
-
-  50%{
-    transform:translateY(-10px) rotate(5deg);
-  }
+    0%,100%{transform:translateY(0) rotate(-3deg)}
+    50%{transform:translateY(-10px) rotate(3deg)}
 }
 
+/* BUTTON */
+
 .main-btn{
-  border:0;
-  padding:13px 25px;
-  border-radius:30px;
-  background:var(--blue);
-  color:#648aa8;
-  font-weight:700;
-  box-shadow:0 5px 0 #afd1e9;
-  transition:.2s;
+    background:var(--blue2);
+    color:white;
+    padding:13px 28px;
+    border-radius:30px;
+    font-weight:700;
+    font-size:14px;
+    box-shadow:0 6px 0 #72aed7;
+    transition:.2s;
 }
 
 .main-btn:hover{
-  transform:translateY(-2px);
+    transform:translateY(-2px);
 }
 
 .main-btn:active{
-  transform:translateY(3px);
-  box-shadow:0 2px 0 #afd1e9;
+    transform:translateY(4px);
+    box-shadow:0 2px 0 #72aed7;
 }
-
-.pink-btn{
-  background:var(--pink);
-  color:#b16f8d;
-  box-shadow:0 5px 0 #e6b8ca;
-}
-
-.yellow-btn{
-  background:var(--yellow);
-  color:#97854d;
-  box-shadow:0 5px 0 #dcc66e;
-}
-
 
 /* PASSWORD */
 
-#passwordPage{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:
-    radial-gradient(circle at 12% 18%,#ffe1ec 0 30px,transparent 31px),
-    radial-gradient(circle at 88% 18%,#d9ebff 0 35px,transparent 36px),
-    radial-gradient(circle at 18% 85%,#fff0b5 0 28px,transparent 29px),
-    var(--cream);
-}
-
 .lock{
-  width:min(90%,420px);
-  background:#fff;
-  border:4px solid #f1e5dc;
-  border-radius:35px;
-  padding:35px 22px;
-  text-align:center;
-  box-shadow:0 18px 45px #c9bca833;
+    font-size:65px;
+    margin-bottom:15px;
 }
 
-.lock-icon{
-  font-size:60px;
+.password-box{
+    background:white;
+    padding:35px 25px;
+    border-radius:30px;
+    max-width:400px;
+    margin:auto;
+    box-shadow:0 12px 35px rgba(150,170,190,.15);
+    border:3px dashed var(--blue);
 }
 
-.lock h1{
-  color:#83b9df;
-  font-size:32px;
-  margin:8px 0;
-}
-
-.lock p{
-  font-size:14px;
-  color:#aaa;
-  margin-bottom:20px;
-}
-
-.password{
-  width:100%;
-  padding:13px;
-  border:2px solid #eadfe1;
-  border-radius:20px;
-  outline:0;
-  text-align:center;
-  font:inherit;
-  margin-bottom:12px;
+.password-box input{
+    width:100%;
+    padding:13px 18px;
+    border:2px solid var(--pink);
+    border-radius:20px;
+    outline:none;
+    text-align:center;
+    font-family:'Quicksand';
+    margin:15px 0;
 }
 
 .error{
-  min-height:18px;
-  color:#d987a5;
-  font-size:13px;
-  margin-top:10px;
+    color:#d78ba8;
+    font-size:13px;
+    margin-top:10px;
 }
 
+/* CALENDAR */
 
-/* WELCOME */
-
-#welcomePage{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  text-align:center;
+.calendar-card{
+    background:white;
+    border-radius:30px;
+    padding:25px;
+    max-width:500px;
+    margin:25px auto;
+    box-shadow:0 12px 35px rgba(150,170,190,.16);
+    border:3px solid var(--blue);
+    position:relative;
 }
 
-.welcome{
-  width:min(92%,600px);
-  margin:auto;
+.calendar-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:20px;
 }
 
-.welcome .emoji{
-  font-size:48px;
+.calendar-top h3{
+    font-family:'Pacifico';
+    font-size:28px;
+    color:#7d9fbc;
+    font-weight:400;
 }
 
-.welcome h1{
-  color:#82b9df;
-  font-size:clamp(40px,10vw,62px);
-  margin:10px 0;
+.calendar-top span{
+    font-size:25px;
 }
 
-.welcome .name{
-  color:#efaac5;
+.weekdays,
+.calendar-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:8px;
 }
 
-.welcome p{
-  line-height:1.8;
-  color:#999;
-  margin-bottom:25px;
+.weekdays{
+    margin-bottom:8px;
+    font-size:12px;
+    font-weight:700;
+    color:#c895aa;
 }
 
-
-/* TITLE */
-
-.title{
-  text-align:center;
-  margin-bottom:25px;
+.date{
+    aspect-ratio:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:14px;
+    position:relative;
 }
 
-.title h2{
-  font:35px Pacifico,cursive;
-  color:#82b9df;
+.date.special{
+    background:var(--pink);
+    color:#b96f91;
+    font-weight:700;
+    border:4px solid #f3b5ce;
+    box-shadow:0 0 0 4px #fff;
 }
 
-.title p{
-  font-size:14px;
-  color:#aaa;
-  margin-top:6px;
+.date.special::after{
+    content:"♡";
+    position:absolute;
+    font-size:11px;
+    right:-3px;
+    top:-5px;
+    color:#efa8c5;
 }
 
+.calendar-note{
+    margin-top:20px;
+    font-size:14px;
+}
 
 /* CAKE */
 
 .cake-area{
-  width:min(94vw,520px);
-  height:390px;
-  margin:0 auto 5px;
-  position:relative;
+    background:white;
+    border-radius:35px;
+    padding:25px;
+    max-width:550px;
+    margin:20px auto;
+    box-shadow:0 12px 35px rgba(150,170,190,.15);
 }
 
 .cake-svg{
-  width:100%;
-  height:100%;
-  overflow:visible;
+    width:min(90%,380px);
+    margin:auto;
+    display:block;
 }
 
-.cake-frosting{
-  fill:#fff8cf;
-  transition:.3s;
+.controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-top:15px;
 }
 
-.cake-base{
-  fill:#fff0b5;
-  transition:.3s;
+.control-btn{
+    background:var(--blue);
+    color:#64849d;
+    padding:9px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
 }
 
-.frosting-edge{
-  fill:#f0d98b;
+.control-btn:hover{
+    background:var(--pink);
 }
 
-.cake-stripe{
-  fill:#ffdce9;
+.control-title{
+    width:100%;
+    font-size:13px;
+    font-weight:700;
+    margin-top:5px;
 }
 
-.plate{
-  fill:#c9e9ff;
-  stroke:#9ed2ef;
-  stroke-width:5;
+.cake-message{
+    display:none;
+    margin-top:20px;
+    background:var(--yellow);
+    padding:20px;
+    border-radius:25px;
 }
 
-.candle-body{
-  fill:#9fd5f4;
-  stroke:#fff;
-  stroke-width:3;
+.cake-message h3{
+    font-family:'Pacifico';
+    font-size:28px;
+    font-weight:400;
+    color:#b49b49;
 }
-
-.candle-middle{
-  fill:#f1a9c7;
-  stroke:#fff;
-  stroke-width:3;
-}
-
-.flame{
-  fill:#ffb84f;
-  animation:flicker .8s infinite alternate;
-  transform-origin:center bottom;
-}
-
-@keyframes flicker{
-  from{
-    transform:scale(1) rotate(-3deg);
-  }
-
-  to{
-    transform:scale(1.08) rotate(4deg);
-  }
-}
-
-.svg-topping{
-  transform-origin:center;
-  animation:pop .3s ease;
-}
-
-@keyframes pop{
-  from{
-    opacity:0;
-    transform:scale(0);
-  }
-
-  80%{
-    transform:scale(1.15);
-  }
-
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
-}
-
-.control{
-  background:#fff;
-  border:3px solid #f0e5dc;
-  border-radius:26px;
-  padding:18px 14px;
-  margin-bottom:13px;
-  text-align:center;
-}
-
-.control h3{
-  margin-bottom:12px;
-}
-
-.options{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:9px;
-}
-
-.option{
-  border:2px solid #e8dfe0;
-  background:#fff;
-  color:#7d7680;
-  border-radius:20px;
-  padding:9px 13px;
-  font-weight:600;
-  transition:.2s;
-}
-
-.option.selected{
-  background:#eaf6ff;
-  border-color:#98ccec;
-  transform:translateY(-2px);
-}
-
-.topping-btn{
-  width:48px;
-  height:48px;
-  padding:0;
-  font-size:21px;
-}
-
-.hint{
-  color:#aaa;
-  font-size:12px;
-  margin-top:10px;
-}
-
-.soft{
-  background:#fff;
-  border:3px solid #f1e5dc;
-  border-radius:28px;
-  padding:25px 20px;
-  box-shadow:0 10px 25px #a8958012;
-}
-
-
-/* MEMORY */
-
-.memory-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-}
-
-.polaroid{
-  background:white;
-  padding:9px 9px 16px;
-  box-shadow:0 7px 16px #8882;
-  transform:rotate(-2deg);
-}
-
-.polaroid:nth-child(even){
-  transform:rotate(3deg);
-}
-
-.polaroid img{
-  width:100%;
-  aspect-ratio:1;
-  object-fit:cover;
-  background:#d9ebff;
-}
-
-.polaroid p{
-  font:14px Pacifico,cursive;
-  text-align:center;
-  margin-top:8px;
-  color:#999;
-}
-
 
 /* WISH JAR */
 
-.wish-jar-area{
-  text-align:center;
+.wish-card{
+    background:white;
+    border-radius:35px;
+    padding:35px 25px;
+    max-width:550px;
+    margin:auto;
+    box-shadow:0 12px 35px rgba(150,170,190,.15);
 }
 
-.jar-card{
-  background:#fff;
-  border:3px solid #f1e5dc;
-  border-radius:30px;
-  padding:25px 18px 30px;
-  box-shadow:0 10px 25px #a8958012;
+.jar{
+    width:170px;
+    height:190px;
+    background:linear-gradient(
+        90deg,
+        rgba(216,237,255,.7),
+        rgba(255,255,255,.9),
+        rgba(216,237,255,.7)
+    );
+    border:5px solid #91c9ef;
+    border-radius:25px 25px 40px 40px;
+    margin:20px auto;
+    position:relative;
+    box-shadow:inset 0 0 20px rgba(145,201,239,.2);
+    transition:.5s;
 }
 
-.jar-photo{
-  width:min(78vw,310px);
-  height:310px;
-  object-fit:cover;
-  border-radius:20px;
-  display:block;
-  margin:0 auto 18px;
-  box-shadow:0 8px 20px #8883;
+.jar::before{
+    content:"";
+    position:absolute;
+    width:125px;
+    height:25px;
+    background:#91c9ef;
+    border-radius:10px;
+    top:-18px;
+    left:17px;
+    border:4px solid white;
 }
 
-.jar-photo:hover{
-  transform:rotate(-1deg) scale(1.01);
+.jar::after{
+    content:"♡";
+    position:absolute;
+    font-size:45px;
+    color:#efa8c5;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
 }
 
-.jar-hint{
-  color:#aaa;
-  font-size:13px;
-  margin-bottom:18px;
+.jar.open{
+    transform:rotate(-4deg) translateY(-8px);
 }
 
-.wish-paper{
-  min-height:120px;
-  margin-top:20px;
-  padding:25px 20px;
-  background:#fffdf3;
-  border:2px dashed #eadbbd;
-  border-radius:18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  line-height:1.8;
-  font-size:15px;
-  color:#77727a;
-  position:relative;
+.wish-text{
+    display:none;
+    background:#fffaf0;
+    border:2px dashed var(--pink2);
+    padding:20px;
+    border-radius:20px;
+    margin:20px 0;
+    font-family:'Pacifico';
+    font-size:18px;
+    color:#ad7891;
+    line-height:1.6;
 }
 
-.wish-paper::before{
-  content:"✦";
-  position:absolute;
-  top:8px;
-  left:14px;
-  color:#efaac5;
+.wish-text.show{
+    display:block;
+    animation:appear .5s ease;
 }
 
-.wish-paper::after{
-  content:"♡";
-  position:absolute;
-  bottom:8px;
-  right:14px;
-  color:#91c9ef;
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.wish-paper.show{
-  animation:wishAppear .6s ease;
+/* MEMORIES */
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin:30px auto;
+    max-width:750px;
 }
 
-@keyframes wishAppear{
-  from{
-    opacity:0;
-    transform:translateY(12px) rotate(-2deg);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0) rotate(0);
-  }
+.polaroid{
+    background:white;
+    padding:10px 10px 18px;
+    box-shadow:0 8px 20px rgba(100,100,100,.12);
+    transform:rotate(-2deg);
 }
 
+.polaroid:nth-child(2){
+    transform:rotate(3deg);
+    margin-top:15px;
+}
+
+.polaroid:nth-child(3){
+    transform:rotate(-1deg);
+}
+
+.polaroid img{
+    width:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+}
+
+.polaroid p{
+    font-family:'Pacifico';
+    color:#999;
+    margin-top:8px;
+    font-size:14px;
+}
 
 /* TICKET */
 
 .ticket{
-  background:#fff;
-  border:3px dashed #efaac5;
-  border-radius:22px;
-  padding:28px 18px;
-  text-align:center;
+    max-width:650px;
+    margin:25px auto;
+    background:var(--blue);
+    border:3px dashed white;
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+    box-shadow:0 12px 35px rgba(150,170,190,.15);
 }
+
+.ticket::before,
+.ticket::after{
+    content:"";
+    position:absolute;
+    width:28px;
+    height:28px;
+    background:var(--cream);
+    border-radius:50%;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.ticket::before{left:-16px}
+.ticket::after{right:-16px}
 
 .ticket h3{
-  font:28px Pacifico,cursive;
-  color:#efaac5;
+    font-family:'Pacifico';
+    color:#6f96b5;
+    font-size:28px;
+    font-weight:400;
 }
 
-.ticket-content{
-  display:none;
-  border-top:2px dashed #f1d8df;
-  margin-top:18px;
-  padding-top:18px;
-  line-height:1.8;
+.ticket-line{
+    border-top:2px dashed #9bc6e5;
+    margin:20px 0;
 }
 
-.ticket-content.show{
-  display:block;
-  animation:appear .5s;
+.ticket-small{
+    font-size:11px;
+    letter-spacing:2px;
 }
-
 
 /* LETTER */
 
 .envelope{
-  text-align:center;
-  cursor:pointer;
+    width:300px;
+    height:190px;
+    background:#ffdce9;
+    margin:30px auto;
+    position:relative;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(150,170,190,.15);
+    transition:.3s;
 }
 
-.envelope-icon{
-  font-size:80px;
-  transition:.3s;
+.envelope:hover{
+    transform:translateY(-5px);
 }
 
-.envelope-icon:hover{
-  transform:translateY(-6px) rotate(3deg);
+.envelope::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#f3b3ca;
+    clip-path:polygon(0 0,50% 55%,100% 0);
+    border-radius:10px 10px 0 0;
+}
+
+.envelope-heart{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-size:35px;
+    z-index:3;
 }
 
 .letter{
-  display:none;
-  background:#fffef7;
-  border:2px solid #eadbbd;
-  border-radius:12px;
-  padding:25px 20px;
-  margin-top:20px;
-  line-height:1.8;
+    display:none;
+    background:#fffef9;
+    max-width:600px;
+    margin:20px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(100,100,100,.1);
+    text-align:left;
+    line-height:1.9;
+    border:2px solid #f4dfc9;
 }
 
 .letter.show{
-  display:block;
-  animation:appear .5s;
+    display:block;
+    animation:appear .5s ease;
 }
 
 .letter h3{
-  font:26px Pacifico,cursive;
-  color:#82b9df;
-  text-align:center;
-  margin-bottom:15px;
+    font-family:'Pacifico';
+    color:#d18eaa;
+    font-size:25px;
+    font-weight:400;
+    margin-bottom:15px;
 }
-
 
 /* GIFT */
 
-.gift-wrap{
-  text-align:center;
-}
-
-.gift{
-  width:190px;
-  height:155px;
-  margin:35px auto 20px;
-  position:relative;
-  cursor:pointer;
-  transition:.3s;
-}
-
-.gift:hover{
-  transform:translateY(-6px);
+.gift-area{
+    margin:30px auto;
+    cursor:pointer;
+    width:180px;
+    height:170px;
+    position:relative;
 }
 
 .gift-box{
-  position:absolute;
-  bottom:0;
-  width:190px;
-  height:125px;
-  background:#d9ebff;
-  border:4px solid #9fcbe9;
-  border-radius:8px;
+    position:absolute;
+    bottom:0;
+    left:15px;
+    width:150px;
+    height:120px;
+    background:#91c9ef;
+    border-radius:5px;
+}
+
+.gift-box::before{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:100%;
+    background:#ffdce9;
+    left:62px;
 }
 
 .gift-lid{
-  position:absolute;
-  top:10px;
-  left:-10px;
-  width:210px;
-  height:45px;
-  background:#ffe1ec;
-  border:4px solid #efaac5;
-  border-radius:8px;
-  z-index:3;
-  transition:.5s;
+    position:absolute;
+    width:170px;
+    height:35px;
+    left:5px;
+    top:15px;
+    background:#efa8c5;
+    border-radius:7px;
+    z-index:2;
 }
 
-.gift-ribbon{
-  position:absolute;
-  width:27px;
-  height:145px;
-  left:81px;
-  bottom:0;
-  background:#fff0b5;
-  z-index:2;
+.gift-lid::before{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:35px;
+    background:#fff0a9;
+    left:72px;
 }
 
-.gift-bow{
-  position:absolute;
-  z-index:5;
-  top:-15px;
-  left:50%;
-  transform:translateX(-50%);
-  font-size:43px;
+.bow-left,
+.bow-right{
+    position:absolute;
+    width:45px;
+    height:35px;
+    background:#fff0a9;
+    border-radius:50%;
+    top:-20px;
 }
 
-.gift.open .gift-lid{
-  transform:translateY(-75px) rotate(-5deg);
+.bow-left{
+    left:45px;
+    transform:rotate(-25deg);
+}
+
+.bow-right{
+    right:45px;
+    transform:rotate(25deg);
 }
 
 .gift-photo{
-  display:none;
-  width:min(75vw,270px);
-  margin:20px auto;
-  border:7px solid white;
-  border-radius:15px;
-  box-shadow:0 8px 20px #8883;
+    display:none;
+    max-width:300px;
+    width:90%;
+    margin:20px auto;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(100,100,100,.15);
 }
 
-.gift-photo.show{
-  display:block;
-  animation:appear .6s;
+.gift-message{
+    display:none;
+    font-family:'Pacifico';
+    color:#d18eaa;
+    font-size:24px;
+    margin:15px;
 }
 
-#giftMessage{
-  text-align:center;
+.gift-photo.show,
+.gift-message.show{
+    display:block;
+    animation:appear .6s ease;
 }
-
 
 /* END */
 
-#endPage{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+.end-heart{
+    font-size:65px;
+    animation:pulse 1.5s infinite;
 }
 
-.end h1{
-  color:#82b9df;
-  font-size:clamp(38px,9vw,58px);
+@keyframes pulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.12)}
 }
-
-.end p{
-  line-height:1.8;
-  margin:18px 0;
-}
-
 
 /* MUSIC */
 
-.music{
-  position:fixed;
-  right:15px;
-  bottom:15px;
-  width:50px;
-  height:50px;
-  border:0;
-  border-radius:50%;
-  background:white;
-  box-shadow:0 5px 20px #7773;
-  z-index:500;
-  font-size:20px;
+.music-btn{
+    position:fixed;
+    bottom:18px;
+    right:18px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:white;
+    border:3px solid var(--pink);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    z-index:100;
+    font-size:20px;
 }
 
+/* RESPONSIVE */
 
-/* CONFETTI */
+@media(max-width:600px){
 
-.confetti{
-  position:fixed;
-  top:-20px;
-  z-index:999;
-  animation:fall 3.5s linear forwards;
-}
+    .page{
+        padding:25px 15px;
+    }
 
-@keyframes fall{
-  to{
-    transform:translateY(110vh) rotate(720deg);
-    opacity:0;
-  }
-}
+    .memory-grid{
+        grid-template-columns:1fr;
+        max-width:270px;
+    }
 
-@keyframes appear{
-  from{
-    opacity:0;
-    transform:translateY(15px) scale(.96);
-  }
+    .polaroid:nth-child(2){
+        margin-top:0;
+    }
 
-  to{
-    opacity:1;
-    transform:translateY(0) scale(1);
-  }
-}
+    .calendar-card{
+        padding:18px 12px;
+    }
 
+    .weekdays,
+    .calendar-grid{
+        gap:4px;
+    }
 
-@media(max-width:520px){
+    .date{
+        font-size:12px;
+    }
 
-  .cake-area{
-    height:350px;
-  }
+    .ticket{
+        padding:25px 20px;
+    }
 
-  .memory-grid{
-    gap:10px;
-  }
-
-  .jar-photo{
-    height:280px;
-  }
+    .envelope{
+        width:260px;
+        height:165px;
+    }
 
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- MUSIC -->
 
-<!-- PASSWORD -->
+<audio id="music" loop>
+    <source src="SpotiDown.App - Lucky Girl Syndrome - ILLIT.mp3" type="audio/mpeg">
+</audio>
 
-<section id="passwordPage">
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
 
-  <div class="lock">
 
-    <div class="lock-icon">🔐</div>
+<!-- ================= PASSWORD ================= -->
 
-    <h1 class="script">
-      A little secret...
-    </h1>
+<section class="page active" id="passwordPage">
 
-    <p>
-      this little birthday world is only for Sheila ♡
-    </p>
+    <div class="container">
 
-    <input
-      id="passwordInput"
-      class="password"
-      type="password"
-      placeholder="enter the secret...">
+        <div class="decor">⭐</div>
+        <div class="decor">☁️</div>
+        <div class="decor">🎀</div>
+        <div class="decor">✦</div>
 
-    <button
-      class="main-btn"
-      onclick="checkPassword()">
-      OPEN ♡
-    </button>
+        <div class="password-box">
 
-    <div
-      id="error"
-      class="error">
+            <div class="lock">🔐</div>
+
+            <h2>For Sheila ♡</h2>
+
+            <p class="subtitle">
+                A little surprise is waiting for you...
+            </p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="enter the secret password"
+            >
+
+            <button class="main-btn" onclick="checkPassword()">
+                OPEN ♡
+            </button>
+
+            <p id="passwordError" class="error"></p>
+
+        </div>
+
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- WELCOME -->
+<!-- ================= WELCOME ================= -->
 
-<section
-  id="welcomePage"
-  class="page hidden">
+<section class="page" id="welcomePage">
 
-  <div class="decor d1">⭐</div>
-  <div class="decor d2">☁️</div>
-  <div class="decor d3">🎀</div>
-  <div class="decor d4">✦</div>
+    <div class="container">
 
-  <div class="welcome">
+        <div class="decor">⭐</div>
+        <div class="decor">☁️</div>
+        <div class="decor">🎀</div>
+        <div class="decor">✦</div>
 
-    <div class="emoji">
-      🩵🎀🧈
-    </div>
+        <h1>Hello, Sheila! ♡</h1>
 
-    <p>
-      welcome to your little birthday world
-    </p>
-
-    <h1 class="script">
-      Hello, <span class="name">Sheila!</span>
-    </h1>
-
-    <p>
-      someone made something tiny,<br>
-      silly and cute just for you ♡
-    </p>
-
-    <button
-      class="main-btn pink-btn"
-      onclick="showPage('cakePage')">
-      START THE DAY ✦
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- CAKE -->
-
-<section
-  id="cakePage"
-  class="page hidden">
-
-  <div class="decor d1">⭐</div>
-  <div class="decor d2">☁️</div>
-  <div class="decor d3">🎀</div>
-  <div class="decor d4">✦</div>
-
-  <div class="content">
-
-    <div class="title">
-
-      <h2>
-        Let's make a cake! 🎂
-      </h2>
-
-      <p>
-        make your own little birthday cake ♡
-      </p>
-
-    </div>
-
-
-    <div class="cake-area">
-
-      <svg
-        class="cake-svg"
-        viewBox="0 0 520 390"
-        xmlns="http://www.w3.org/2000/svg">
-
-        <ellipse
-          class="plate"
-          cx="260"
-          cy="350"
-          rx="165"
-          ry="25"/>
-
-        <path
-          id="cakeBase"
-          class="cake-base"
-          d="
-          M125 245
-          Q125 225 145 218
-          Q260 195 375 218
-          Q395 225 395 245
-          L395 315
-          Q395 338 370 342
-          L150 342
-          Q125 338 125 315
-          Z"/>
-
-        <path
-          class="cake-stripe"
-          d="
-          M125 275
-          Q260 300 395 275
-          L395 292
-          Q260 317 125 292
-          Z"/>
-
-        <path
-          id="frosting"
-          class="cake-frosting"
-          d="
-          M112 215
-          Q115 190 145 181
-          Q185 165 225 172
-          Q260 158 295 172
-          Q335 165 375 181
-          Q405 190 408 215
-          Q405 235 387 240
-          Q374 244 365 258
-          Q355 274 340 258
-          Q328 242 315 258
-          Q302 277 286 258
-          Q270 239 255 260
-          Q240 279 223 258
-          Q208 239 192 258
-          Q178 276 163 257
-          Q151 242 137 241
-          Q115 237 112 215
-          Z"/>
-
-        <path
-          id="frostingEdge"
-          class="frosting-edge"
-          d="
-          M115 220
-          Q145 235 170 228
-          Q195 220 220 231
-          Q245 242 260 232
-          Q275 242 300 231
-          Q325 220 350 228
-          Q375 235 405 220
-          L405 232
-          Q375 248 350 240
-          Q325 232 300 243
-          Q275 254 260 244
-          Q245 254 220 243
-          Q195 232 170 240
-          Q145 248 115 232
-          Z"/>
-
-
-        <g>
-
-          <rect
-            x="182"
-            y="105"
-            width="38"
-            height="88"
-            rx="11"
-            class="candle-body"/>
-
-          <rect
-            x="241"
-            y="82"
-            width="38"
-            height="111"
-            rx="11"
-            class="candle-middle"/>
-
-          <rect
-            x="300"
-            y="105"
-            width="38"
-            height="88"
-            rx="11"
-            class="candle-body"/>
-
-
-          <path
-            d="M189 130l20-13M189 158l20-13"
-            stroke="white"
-            stroke-width="8"
-            stroke-linecap="round"
-            opacity=".75"/>
-
-          <path
-            d="M248 112l20-13M248 142l20-13M248 172l20-13"
-            stroke="white"
-            stroke-width="8"
-            stroke-linecap="round"
-            opacity=".75"/>
-
-          <path
-            d="M307 130l20-13M307 158l20-13"
-            stroke="white"
-            stroke-width="8"
-            stroke-linecap="round"
-            opacity=".75"/>
-
-
-          <path
-            class="flame"
-            d="
-            M201 99
-            C190 87 202 75 204 66
-            C217 80 215 91 201 99Z"/>
-
-          <path
-            class="flame"
-            d="
-            M260 76
-            C249 64 261 50 263 40
-            C277 55 275 68 260 76Z"/>
-
-          <path
-            class="flame"
-            d="
-            M319 99
-            C308 87 320 75 322 66
-            C335 80 333 91 319 99Z"/>
-
-        </g>
-
-
-        <g id="toppingLayer"></g>
-
-
-        <g
-          stroke-linecap="round"
-          stroke-width="7">
-
-          <path
-            d="M158 207l10-5"
-            stroke="#8fc9ed"/>
-
-          <path
-            d="M207 195l10 5"
-            stroke="#f1a9c7"/>
-
-          <path
-            d="M278 200l10-5"
-            stroke="#ffe06b"/>
-
-          <path
-            d="M330 194l10 5"
-            stroke="#9eddbf"/>
-
-          <path
-            d="M365 211l10-5"
-            stroke="#f1a9c7"/>
-
-        </g>
-
-      </svg>
-
-    </div>
-
-
-    <div class="control">
-
-      <h3>
-        🍰 choose the flavor
-      </h3>
-
-      <div class="options">
-
-        <button
-          class="option flavor selected"
-          data-color="#fff8cf"
-          data-base="#fff0b5"
-          data-edge="#ead489">
-          🤍 Vanilla
-        </button>
-
-        <button
-          class="option flavor"
-          data-color="#ffdce9"
-          data-base="#ffc6da"
-          data-edge="#efabc5">
-          🍓 Strawberry
-        </button>
-
-        <button
-          class="option flavor"
-          data-color="#cce9ff"
-          data-base="#b5dcf6"
-          data-edge="#8fc4e8">
-          🫐 Blueberry
-        </button>
-
-        <button
-          class="option flavor"
-          data-color="#dfc3a9"
-          data-base="#cba989"
-          data-edge="#b58f70">
-          🍫 Choco
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="control">
-
-      <h3>
-        🎀 add some toppings
-      </h3>
-
-      <div class="options">
-
-        <button
-          class="option topping-btn"
-          data-type="cherry">
-          🍒
-        </button>
-
-        <button
-          class="option topping-btn"
-          data-type="strawberry">
-          🍓
-        </button>
-
-        <button
-          class="option topping-btn"
-          data-type="bow">
-          🎀
-        </button>
-
-        <button
-          class="option topping-btn"
-          data-type="heart">
-          🩵
-        </button>
-
-        <button
-          class="option topping-btn"
-          data-type="star">
-          ⭐
-        </button>
-
-        <button
-          class="option topping-btn"
-          data-type="flower">
-          🌸
-        </button>
-
-      </div>
-
-      <p class="hint">
-        tap lagi topping yang sama untuk menghapusnya ♡
-      </p>
-
-    </div>
-
-
-    <div class="control">
-
-      <h3>
-        🕯️ choose candle color
-      </h3>
-
-      <div class="options">
-
-        <button
-          class="option candle-color selected"
-          data-color="#9fd5f4">
-          🩵 Blue
-        </button>
-
-        <button
-          class="option candle-color"
-          data-color="#f1a9c7">
-          🎀 Pink
-        </button>
-
-        <button
-          class="option candle-color"
-          data-color="#ffe27b">
-          🧈 Yellow
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="center">
-
-      <button
-        id="finishCake"
-        class="main-btn pink-btn">
-        MY CAKE IS READY! 🎂
-      </button>
-
-    </div>
-
-
-    <div
-      id="cakeMessage"
-      class="soft center hidden"
-      style="margin-top:20px">
-
-      <h2
-        class="script"
-        style="color:#efaac5">
-        Ta-daaa! 🎀
-      </h2>
-
-      <p
-        style="margin:10px 0;line-height:1.8">
-        Your cake is ready!<br>
-        Now make a little wish ♡
-      </p>
-
-      <button
-        class="main-btn yellow-btn"
-        onclick="makeWish()">
-        ✨ MAKE A WISH ✨
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- MEMORY -->
-
-<section
-  id="memoryPage"
-  class="page hidden">
-
-  <div class="content">
-
-    <div class="title">
-
-      <h2>
-        Little Memories 📸
-      </h2>
-
-      <p>
-        a tiny scrapbook of you ♡
-      </p>
-
-    </div>
-
-
-    <div class="memory-grid">
-
-      <div class="polaroid">
-
-        <img
-          src="IMG-20261001-WA0016.jpg">
-
-        <p>
-          memory no. 01 ♡
+        <p class="subtitle">
+            I made a tiny little corner of the internet just for you.
         </p>
 
-      </div>
-
-
-      <div class="polaroid">
-
-        <img
-          src="IMG-20261001-WA0015.jpg">
-
-        <p>
-          memory no. 02 ✦
-        </p>
-
-      </div>
-
-
-      <div class="polaroid">
-
-        <img
-          src="IMG-20261001-WA0014.jpg">
-
-        <p>
-          memory no. 03 🎀
-        </p>
-
-      </div>
+        <button class="main-btn" onclick="showPage('calendarPage')">
+            START THE DAY ♡
+        </button>
 
     </div>
-
-
-    <div
-      class="center"
-      style="margin-top:30px">
-
-      <button
-        class="main-btn"
-        onclick="showPage('wishPage')">
-        NEXT → 🫙
-      </button>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- WISH JAR -->
+<!-- ================= CALENDAR ================= -->
 
-<section
-  id="wishPage"
-  class="page hidden">
+<section class="page" id="calendarPage">
 
-  <div class="content">
+    <div class="container">
 
-    <div class="title">
+        <h2>A Special Day ♡</h2>
 
-      <h2>
-        A Jar Full of Wishes 🫙
-      </h2>
+        <p class="subtitle">
+            Some dates are just a little more special.
+        </p>
 
-      <p>
-        pick a little wish just for you ♡
-      </p>
+        <div class="calendar-card">
+
+            <div class="calendar-top">
+                <span>🎀</span>
+                <h3>October 2026</h3>
+                <span>🌷</span>
+            </div>
+
+            <div class="weekdays">
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+                <span>SUN</span>
+            </div>
+
+            <div class="calendar-grid">
+
+                <!-- first row -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <span class="date special">1</span>
+                <span class="date">2</span>
+                <span class="date">3</span>
+                <span class="date">4</span>
+
+                <!-- second row -->
+                <span class="date">5</span>
+                <span class="date">6</span>
+                <span class="date">7</span>
+                <span class="date">8</span>
+                <span class="date">9</span>
+                <span class="date">10</span>
+                <span class="date">11</span>
+
+                <!-- third row -->
+                <span class="date">12</span>
+                <span class="date">13</span>
+                <span class="date">14</span>
+                <span class="date">15</span>
+                <span class="date">16</span>
+                <span class="date">17</span>
+                <span class="date">18</span>
+
+                <!-- fourth row -->
+                <span class="date">19</span>
+                <span class="date">20</span>
+                <span class="date">21</span>
+                <span class="date">22</span>
+                <span class="date">23</span>
+                <span class="date">24</span>
+                <span class="date">25</span>
+
+                <!-- fifth row -->
+                <span class="date">26</span>
+                <span class="date">27</span>
+                <span class="date">28</span>
+                <span class="date">29</span>
+                <span class="date">30</span>
+                <span class="date">31</span>
+                <span></span>
+
+            </div>
+
+            <p class="calendar-note">
+                ♡ this is the day the world got a little brighter ♡
+            </p>
+
+        </div>
+
+        <button class="main-btn" onclick="showPage('cakePage')">
+            LET'S BAKE! 🎂
+        </button>
 
     </div>
-
-
-    <div class="jar-card">
-
-      <img
-        src="wish-jar.jpg"
-        class="jar-photo"
-        alt="A little jar full of wishes">
-
-
-      <p class="jar-hint">
-        tap the jar to open a random wish ✨
-      </p>
-
-
-      <button
-        id="wishButton"
-        class="main-btn pink-btn"
-        onclick="openWish()">
-        OPEN A WISH ♡
-      </button>
-
-
-      <div
-        id="wishPaper"
-        class="wish-paper">
-
-        every little wish deserves a chance to come true ♡
-
-      </div>
-
-    </div>
-
-
-    <div
-      class="center"
-      style="margin-top:30px">
-
-      <button
-        class="main-btn"
-        onclick="showPage('ticketPage')">
-        NEXT → 🎟️
-      </button>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- TICKET -->
+<!-- ================= CAKE ================= -->
 
-<section
-  id="ticketPage"
-  class="page hidden">
+<section class="page" id="cakePage">
 
-  <div class="content">
+    <div class="container">
 
-    <div class="title">
+        <h2>Make Your Cake ♡</h2>
 
-      <h2>
-        A Little Surprise 🎟️
-      </h2>
+        <p class="subtitle">
+            Pick your favorite flavor, toppings and candle colors!
+        </p>
 
-      <p>
-        you've unlocked a tiny ticket ♡
-      </p>
+        <div class="cake-area">
+
+            <svg class="cake-svg" viewBox="0 0 400 300">
+
+                <!-- candles -->
+                <rect id="candle1" x="125" y="35" width="18" height="70"
+                    rx="5" fill="#efa8c5"/>
+
+                <rect id="candle2" x="191" y="20" width="18" height="85"
+                    rx="5" fill="#91c9ef"/>
+
+                <rect id="candle3" x="257" y="35" width="18" height="70"
+                    rx="5" fill="#fff0a9"/>
+
+                <!-- flames -->
+                <ellipse id="flame1" cx="134" cy="25" rx="7" ry="12"
+                    fill="#ffd36e"/>
+
+                <ellipse id="flame2" cx="200" cy="10" rx="7" ry="12"
+                    fill="#ffd36e"/>
+
+                <ellipse id="flame3" cx="266" cy="25" rx="7" ry="12"
+                    fill="#ffd36e"/>
+
+                <!-- cake -->
+                <rect id="cakeBody"
+                    x="80" y="130"
+                    width="240"
+                    height="105"
+                    rx="18"
+                    fill="#d8edff"/>
+
+                <!-- frosting -->
+                <path
+                    d="M80 135
+                       Q105 110 130 135
+                       Q155 110 180 135
+                       Q205 110 230 135
+                       Q255 110 280 135
+                       Q305 110 320 135
+                       L320 165
+                       L80 165 Z"
+                    fill="#fffaf0"/>
+
+                <!-- cake edge -->
+                <rect
+                    x="80"
+                    y="215"
+                    width="240"
+                    height="20"
+                    rx="8"
+                    fill="#91c9ef"/>
+
+                <!-- sprinkles -->
+                <circle cx="120" cy="180" r="5" fill="#efa8c5"/>
+                <circle cx="155" cy="195" r="5" fill="#fff0a9"/>
+                <circle cx="200" cy="180" r="5" fill="#efa8c5"/>
+                <circle cx="240" cy="195" r="5" fill="#fff0a9"/>
+                <circle cx="280" cy="180" r="5" fill="#efa8c5"/>
+
+            </svg>
+
+
+            <div class="controls">
+
+                <div class="control-title">
+                    🍰 FLAVOR
+                </div>
+
+                <button class="control-btn" onclick="changeCake('#d8edff')">
+                    Blueberry
+                </button>
+
+                <button class="control-btn" onclick="changeCake('#ffd6c7')">
+                    Strawberry
+                </button>
+
+                <button class="control-btn" onclick="changeCake('#c9a17a')">
+                    Chocolate
+                </button>
+
+                <button class="control-btn" onclick="changeCake('#fff1c7')">
+                    Vanilla
+                </button>
+
+
+                <div class="control-title">
+                    ✨ TOPPING
+                </div>
+
+                <button class="control-btn" onclick="addTopping('🍓')">
+                    Strawberry
+                </button>
+
+                <button class="control-btn" onclick="addTopping('🍒')">
+                    Cherry
+                </button>
+
+                <button class="control-btn" onclick="addTopping('✨')">
+                    Sprinkles
+                </button>
+
+
+                <div class="control-title">
+                    🕯️ CANDLE
+                </div>
+
+                <button class="control-btn" onclick="changeCandles('#efa8c5')">
+                    Pink
+                </button>
+
+                <button class="control-btn" onclick="changeCandles('#91c9ef')">
+                    Blue
+                </button>
+
+                <button class="control-btn" onclick="changeCandles('#fff0a9')">
+                    Yellow
+                </button>
+
+            </div>
+
+
+            <div style="margin-top:25px">
+
+                <button class="main-btn" onclick="finishCake()">
+                    DONE! ♡
+                </button>
+
+            </div>
+
+
+            <div id="cakeMessage" class="cake-message">
+
+                <h3>MAKE A WISH ✨</h3>
+
+                <p>
+                    Close your eyes, make your biggest wish,
+                    and blow out the candles ♡
+                </p>
+
+                <br>
+
+                <button class="main-btn" onclick="makeWish()">
+                    WISH! 🎂
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
-
-    <div class="ticket">
-
-      <h3>
-        ONE LITTLE SURPRISE
-      </h3>
-
-      <p style="margin:10px">
-        valid for: <b>Sheila</b>
-      </p>
+</section>
 
 
-      <button
-        class="main-btn yellow-btn"
-        onclick="openTicket()">
-        TAP TO REVEAL
-      </button>
+<!-- ================= WISH JAR ================= -->
 
+<section class="page" id="wishPage">
 
-      <div
-        id="ticketContent"
-        class="ticket-content">
+    <div class="container">
 
-        ✨ surprise! ✨
+        <h2>A Little Wish ♡</h2>
 
-        <br><br>
+        <p class="subtitle">
+            Open the jar and see what little wish is waiting for you.
+        </p>
 
-        You are officially allowed to have
-        the happiest birthday ever.
+        <div class="wish-card">
+
+            <div id="jar" class="jar"></div>
+
+            <div id="wishText" class="wish-text"></div>
+
+            <button class="main-btn" onclick="openWishJar()">
+                OPEN THE JAR 🫙
+            </button>
+
+        </div>
 
         <br>
 
-        This ticket is 100% non-refundable. 🎀
-
-      </div>
-
-    </div>
-
-
-    <div
-      class="center"
-      style="margin-top:30px">
-
-      <button
-        class="main-btn"
-        onclick="showPage('letterPage')">
-        NEXT → 💌
-      </button>
+        <button class="main-btn" onclick="showPage('memoryPage')">
+            NEXT ♡
+        </button>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- LETTER -->
+<!-- ================= MEMORIES ================= -->
 
-<section
-  id="letterPage"
-  class="page hidden">
+<section class="page" id="memoryPage">
 
-  <div class="content">
+    <div class="container">
 
-    <div class="title">
+        <h2>Little Memories ♡</h2>
 
-      <h2>
-        A Letter For You 💌
-      </h2>
-
-      <p>
-        okay... this part is a little more serious ♡
-      </p>
-
-    </div>
-
-
-    <div
-      class="soft envelope"
-      onclick="openLetter()">
-
-      <div
-        id="envelopeIcon"
-        class="envelope-icon">
-        💌
-      </div>
-
-      <p>
-        tap the envelope to open
-      </p>
-
-    </div>
-
-
-    <div
-      id="letter"
-      class="letter">
-
-      <h3>
-        Dear Sheila ♡
-      </h3>
-
-      <p>
-        Happy birthday, Sheila!
-      </p>
-
-      <br>
-
-      <p>
-        Thank you for being part of so many
-        little moments and memories.
-        I hope this new chapter brings you
-        lots of happiness, good things,
-        and people who genuinely care about you.
-      </p>
-
-      <br>
-
-      <p>
-        I hope you always have reasons to smile,
-        reasons to be proud of yourself,
-        and wish you all the best
-      </p>
-
-      <br>
-
-      <p>
-        Stay the lovely Sheila that you are. 🩵
-      </p>
-
-      <br>
-
-      <p>
-        Happy birthday once again! 🎀
-      </p>
-
-    </div>
-
-
-    <div
-      class="center"
-      style="margin-top:30px">
-
-      <button
-        class="main-btn pink-btn"
-        onclick="showPage('giftPage')">
-        ONE LAST THING → 🎁
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- GIFT -->
-
-<section
-  id="giftPage"
-  class="page hidden">
-
-  <div class="content">
-
-    <div class="title">
-
-      <h2>
-        One Last Surprise 🎁
-      </h2>
-
-      <p>
-        there's something hiding inside...
-      </p>
-
-    </div>
-
-
-    <div class="gift-wrap">
-
-      <div
-        id="gift"
-        class="gift"
-        onclick="openGift()">
-
-        <div class="gift-bow">
-          🎀
-        </div>
-
-        <div class="gift-lid"></div>
-
-        <div class="gift-box"></div>
-
-        <div class="gift-ribbon"></div>
-
-      </div>
-
-
-      <p>
-        tap the gift box ♡
-      </p>
-
-
-      <!-- FOTO HADIAH BARU -->
-
-      <img
-        id="giftPhoto"
-        class="gift-photo"
-        src="d8f89a3e826e08614a984ff64cb815df.jpg">
-
-
-      <div
-        id="giftMessage"
-        class="soft hidden"
-        style="margin-top:20px">
-
-        <h2
-          class="script"
-          style="color:#efaac5">
-          SURPRISE!! 🎀
-        </h2>
-
-        <p style="margin-top:10px">
-          You made it all the way here! 🥹
+        <p class="subtitle">
+            A tiny collection of moments worth keeping.
         </p>
 
-      </div>
+
+        <div class="memory-grid">
+
+            <div class="polaroid">
+                <img src="IMG-20261001-WA0016.jpg">
+                <p>♡ little moment</p>
+            </div>
+
+            <div class="polaroid">
+                <img src="IMG-20261001-WA0015.jpg">
+                <p>♡ good memories</p>
+            </div>
+
+            <div class="polaroid">
+                <img src="IMG-20261001-WA0014.jpg">
+                <p>♡ forever cute</p>
+            </div>
+
+        </div>
 
 
-      <button
-        id="endingButton"
-        class="main-btn yellow-btn hidden"
-        style="margin-top:25px"
-        onclick="showPage('endPage')">
-        FINISH ✨
-      </button>
+        <button class="main-btn" onclick="showPage('ticketPage')">
+            NEXT ♡
+        </button>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- END -->
+<!-- ================= TICKET ================= -->
 
-<section
-  id="endPage"
-  class="page hidden">
+<section class="page" id="ticketPage">
 
-  <div class="decor d1">⭐</div>
-  <div class="decor d2">☁️</div>
-  <div class="decor d3">🎀</div>
-  <div class="decor d4">✦</div>
+    <div class="container">
 
-  <div class="content end">
+        <h2>One Little Surprise ♡</h2>
 
-    <div style="font-size:28px">
-      ✦ ♡ ✦
+        <div class="ticket">
+
+            <p class="ticket-small">
+                SPECIAL BIRTHDAY PASS
+            </p>
+
+            <div class="ticket-line"></div>
+
+            <h3>HAPPIEST DAY EVER 🎟️</h3>
+
+            <div class="ticket-line"></div>
+
+            <p>
+                You are officially allowed to have
+                the happiest birthday ever.
+            </p>
+
+            <br>
+
+            <p>
+                Valid forever ♡
+            </p>
+
+        </div>
+
+        <button class="main-btn" onclick="showPage('letterPage')">
+            NEXT ♡
+        </button>
+
     </div>
-
-    <h1 class="script">
-      Happy Birthday,<br>
-      Sheila! 🩵
-    </h1>
-
-    <p>
-      I hope your day is filled with happy
-      little moments, lovely memories,
-      and lots of reasons to smile.
-    </p>
-
-    <div style="font-size:28px">
-      🎀 🧈 🩵
-    </div>
-
-    <p
-      class="script"
-      style="color:#efaac5">
-      made with a little bit of love ♡
-    </p>
-
-  </div>
 
 </section>
 
 
-<!-- MUSIC -->
+<!-- ================= LETTER ================= -->
 
-<audio
-  id="music"
-  loop>
+<section class="page" id="letterPage">
 
-  <source
-    src="SpotiDown.App - Lucky Girl Syndrome - ILLIT.mp3"
-    type="audio/mpeg">
+    <div class="container">
 
-</audio>
+        <h2>A Letter For You ♡</h2>
+
+        <p class="subtitle">
+            Tap the envelope.
+        </p>
 
 
-<button
-  id="musicBtn"
-  class="music"
-  onclick="toggleMusic()">
-  🎵
-</button>
+        <div class="envelope" onclick="openLetter()">
+
+            <div class="envelope-heart">
+                💌
+            </div>
+
+        </div>
+
+
+        <div id="letter" class="letter">
+
+            <h3>Dear Sheila,</h3>
+
+            <p>
+                Happy birthday! ♡
+            </p>
+
+            <br>
+
+            <p>
+                I hope this little website can remind you
+                that there are so many tiny things worth
+                smiling about.
+            </p>
+
+            <br>
+
+            <p>
+                May this new chapter bring you lots of
+                beautiful memories, unexpected happiness,
+                peaceful days, and people who make you feel
+                loved.
+            </p>
+
+            <br>
+
+            <p>
+                Keep being yourself, keep dreaming,
+                and keep collecting little moments
+                that make life feel special.
+            </p>
+
+            <br>
+
+            <p>
+                With lots of love ♡
+            </p>
+
+        </div>
+
+
+        <br>
+
+        <button class="main-btn" onclick="showPage('giftPage')">
+            NEXT 🎁
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GIFT ================= -->
+
+<section class="page" id="giftPage">
+
+    <div class="container">
+
+        <h2>One Last Thing ♡</h2>
+
+        <p class="subtitle">
+            There's still one little gift waiting for you...
+        </p>
+
+
+        <div class="gift-area" onclick="openGift()">
+
+            <div class="gift-lid">
+
+                <div class="bow-left"></div>
+                <div class="bow-right"></div>
+
+            </div>
+
+            <div class="gift-box"></div>
+
+        </div>
+
+
+        <p>
+            Tap the gift 🎁
+        </p>
+
+
+        <img
+            id="giftPhoto"
+            class="gift-photo"
+            src="d8f89a3e826e08614a984ff64cb815df.jpg"
+        >
+
+
+        <div id="giftMessage" class="gift-message">
+            A little something just for you ♡
+        </div>
+
+
+        <button
+            id="endingButton"
+            class="main-btn"
+            style="display:none"
+            onclick="showPage('endPage')"
+        >
+            ONE LAST PAGE ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= END ================= -->
+
+<section class="page" id="endPage">
+
+    <div class="container">
+
+        <div class="end-heart">
+            🩵
+        </div>
+
+        <h1>Happy Birthday, Sheila!</h1>
+
+        <p class="subtitle">
+            May your days be soft, bright,
+            and full of little reasons to smile.
+        </p>
+
+        <p>
+            ♡ ♡ ♡
+        </p>
+
+        <br>
+
+        <p>
+            Thank you for opening this little world.
+        </p>
+
+    </div>
+
+</section>
 
 
 <script>
 
-
-/* PASSWORD */
+/* ================= PASSWORD ================= */
 
 const PASSWORD = "01102010";
 
-
 function checkPassword(){
 
-  const input =
-    document.getElementById("passwordInput");
+    const input =
+        document.getElementById("passwordInput").value;
 
-  const error =
-    document.getElementById("error");
+    const error =
+        document.getElementById("passwordError");
 
+    if(input === PASSWORD){
 
-  if(input.value === PASSWORD){
+        error.textContent = "";
 
-    document
-      .getElementById("passwordPage")
-      .classList.add("hidden");
+        showPage("welcomePage");
 
-
-    document
-      .getElementById("welcomePage")
-      .classList.remove("hidden");
-
-
-    startMusic();
-
-  }else{
-
-    error.textContent =
-      "hmm... bukan itu 👀 coba lagi ♡";
-
-    input.value="";
-
-  }
-
-}
-
-
-document
-  .getElementById("passwordInput")
-  .addEventListener("keydown",e=>{
-
-    if(e.key==="Enter"){
-      checkPassword();
-    }
-
-  });
-
-
-/* NAVIGATION */
-
-function showPage(id){
-
-  document
-    .querySelectorAll(".page")
-    .forEach(p=>{
-      p.classList.add("hidden");
-    });
-
-
-  document
-    .getElementById(id)
-    .classList.remove("hidden");
-
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
-}
-
-
-/* MUSIC */
-
-const music =
-  document.getElementById("music");
-
-const musicBtn =
-  document.getElementById("musicBtn");
-
-
-function startMusic(){
-
-  music.play()
-
-    .then(()=>{
-
-      musicBtn.textContent="🎵";
-
-    })
-
-    .catch(()=>{
-
-      musicBtn.textContent="🔇";
-
-    });
-
-}
-
-
-function toggleMusic(){
-
-  if(music.paused){
-
-    music.play();
-
-    musicBtn.textContent="🎵";
-
-  }else{
-
-    music.pause();
-
-    musicBtn.textContent="🔇";
-
-  }
-
-}
-
-
-/* CAKE FLAVOR */
-
-const frosting =
-  document.getElementById("frosting");
-
-const cakeBase =
-  document.getElementById("cakeBase");
-
-const frostingEdge =
-  document.getElementById("frostingEdge");
-
-
-document
-  .querySelectorAll(".flavor")
-  .forEach(btn=>{
-
-    btn.addEventListener("click",()=>{
-
-      document
-        .querySelectorAll(".flavor")
-        .forEach(x=>{
-          x.classList.remove("selected");
-        });
-
-
-      btn.classList.add("selected");
-
-
-      frosting.style.fill =
-        btn.dataset.color;
-
-      cakeBase.style.fill =
-        btn.dataset.base;
-
-      frostingEdge.style.fill =
-        btn.dataset.edge;
-
-    });
-
-  });
-
-
-/* TOPPINGS */
-
-const toppingLayer =
-  document.getElementById("toppingLayer");
-
-const toppingButtons =
-  document.querySelectorAll(".topping-btn");
-
-let activeToppings={};
-
-
-const positions={
-
-  cherry:[150,185],
-
-  strawberry:[215,178],
-
-  bow:[345,185],
-
-  heart:[280,188],
-
-  star:[315,205],
-
-  flower:[185,207]
-
-};
-
-
-function makeTopping(type){
-
-  const [x,y]=positions[type];
-
-
-  const g =
-    document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "g"
-    );
-
-
-  g.classList.add("svg-topping");
-
-
-  g.setAttribute(
-    "transform",
-    `translate(${x} ${y})`
-  );
-
-
-  if(type==="cherry"){
-
-    g.innerHTML=`
-
-      <path
-        d="M0 5 Q8 -20 18 -25"
-        fill="none"
-        stroke="#6da957"
-        stroke-width="4"
-        stroke-linecap="round"/>
-
-      <circle
-        cx="-5"
-        cy="9"
-        r="10"
-        fill="#e94f62"/>
-
-      <circle
-        cx="12"
-        cy="6"
-        r="10"
-        fill="#e94f62"/>
-
-      <circle
-        cx="-8"
-        cy="5"
-        r="3"
-        fill="#ffb1b9"/>
-
-      <circle
-        cx="9"
-        cy="2"
-        r="3"
-        fill="#ffb1b9"/>
-
-    `;
-
-  }
-
-
-  if(type==="strawberry"){
-
-    g.innerHTML=`
-
-      <path
-        d="M0 -8 Q10 -20 20 -8"
-        fill="none"
-        stroke="#6ca65b"
-        stroke-width="4"/>
-
-      <path
-        d="
-        M-3 -5
-        Q10 -15 23 -5
-        Q20 17 10 22
-        Q0 17 -3 -5Z"
-        fill="#f36d7e"/>
-
-      <circle
-        cx="5"
-        cy="2"
-        r="1.8"
-        fill="#fff4bf"/>
-
-      <circle
-        cx="14"
-        cy="1"
-        r="1.8"
-        fill="#fff4bf"/>
-
-      <circle
-        cx="10"
-        cy="10"
-        r="1.8"
-        fill="#fff4bf"/>
-
-    `;
-
-  }
-
-
-  if(type==="bow"){
-
-    g.innerHTML=`
-
-      <path
-        d="
-        M0 0
-        C-30 -22 -38 5 -3 8
-        C-38 30 -15 34 4 7Z"
-        fill="#f28cab"/>
-
-      <path
-        d="
-        M5 5
-        C35 -22 42 5 9 9
-        C40 29 18 34 3 9Z"
-        fill="#f28cab"/>
-
-      <circle
-        cx="4"
-        cy="7"
-        r="7"
-        fill="#d96f94"/>
-
-    `;
-
-  }
-
-
-  if(type==="heart"){
-
-    g.innerHTML=`
-
-      <path
-        d="
-        M0 7
-        C-20 -10 -10 -24 0 -13
-        C10 -24 20 -10 0 7Z"
-        fill="#76c9ef"/>
-
-      <path
-        d="
-        M-7 -9
-        Q-3 -15 2 -13"
-        fill="none"
-        stroke="#bce8ff"
-        stroke-width="3"
-        stroke-linecap="round"/>
-
-    `;
-
-  }
-
-
-  if(type==="star"){
-
-    g.innerHTML=`
-
-      <path
-        d="
-        M0 -17
-        L5 -5
-        L18 -5
-        L8 3
-        L12 16
-        L0 9
-        L-12 16
-        L-8 3
-        L-18 -5
-        L-5 -5Z"
-        fill="#ffe16b"/>
-
-    `;
-
-  }
-
-
-  if(type==="flower"){
-
-    g.innerHTML=`
-
-      <circle
-        cx="0"
-        cy="-9"
-        r="8"
-        fill="#f4aeca"/>
-
-      <circle
-        cx="9"
-        cy="0"
-        r="8"
-        fill="#f4aeca"/>
-
-      <circle
-        cx="0"
-        cy="9"
-        r="8"
-        fill="#f4aeca"/>
-
-      <circle
-        cx="-9"
-        cy="0"
-        r="8"
-        fill="#f4aeca"/>
-
-      <circle
-        cx="0"
-        cy="0"
-        r="6"
-        fill="#ffe27b"/>
-
-    `;
-
-  }
-
-
-  return g;
-
-}
-
-
-toppingButtons.forEach(btn=>{
-
-  btn.addEventListener("click",()=>{
-
-    const type=btn.dataset.type;
-
-
-    if(activeToppings[type]){
-
-      activeToppings[type].remove();
-
-      delete activeToppings[type];
-
-      btn.classList.remove("selected");
+        playMusic();
 
     }else{
 
-      const topping =
-        makeTopping(type);
-
-      toppingLayer.appendChild(topping);
-
-      activeToppings[type]=topping;
-
-      btn.classList.add("selected");
+        error.textContent =
+            "Hmm... that's not the password ♡";
 
     }
 
-  });
-
-});
+}
 
 
-/* CANDLE COLORS */
+/* ================= NAVIGATION ================= */
 
-document
-  .querySelectorAll(".candle-color")
-  .forEach(btn=>{
+function showPage(id){
 
-    btn.addEventListener("click",()=>{
-
-      document
-        .querySelectorAll(".candle-color")
-        .forEach(x=>{
-          x.classList.remove("selected");
-        });
-
-
-      btn.classList.add("selected");
-
-
-      document
-        .querySelectorAll(
-          ".candle-body,.candle-middle"
-        )
-        .forEach(c=>{
-
-          c.style.fill =
-            btn.dataset.color;
-
-        });
-
+    document.querySelectorAll(".page").forEach(page=>{
+        page.classList.remove("active");
     });
 
-  });
+    const target =
+        document.getElementById(id);
+
+    if(target){
+        target.classList.add("active");
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+    }
+
+}
 
 
-/* CAKE COMPLETE */
+/* ================= MUSIC ================= */
 
-document
-  .getElementById("finishCake")
-  .addEventListener("click",()=>{
+const music =
+    document.getElementById("music");
+
+function playMusic(){
+
+    music.volume = 0.45;
+
+    music.play().catch(()=>{
+        // browser may block autoplay
+    });
+
+}
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        music.play();
+
+    }else{
+
+        music.pause();
+
+    }
+
+}
+
+
+/* ================= CAKE ================= */
+
+function changeCake(color){
 
     document
-      .getElementById("cakeMessage")
-      .classList.remove("hidden");
+        .getElementById("cakeBody")
+        .setAttribute("fill",color);
 
-    createConfetti();
-
-  });
+}
 
 
-/* WISH AFTER CAKE */
+function changeCandles(color){
+
+    document
+        .getElementById("candle1")
+        .setAttribute("fill",color);
+
+    document
+        .getElementById("candle2")
+        .setAttribute("fill",color);
+
+    document
+        .getElementById("candle3")
+        .setAttribute("fill",color);
+
+}
+
+
+function addTopping(symbol){
+
+    const cake =
+        document.querySelector(".cake-area");
+
+    const topping =
+        document.createElement("div");
+
+    topping.textContent = symbol;
+
+    topping.style.position = "absolute";
+    topping.style.fontSize = "28px";
+    topping.style.left =
+        (Math.random()*60+20)+"%";
+    topping.style.top =
+        (Math.random()*10+35)+"%";
+
+    topping.style.pointerEvents = "none";
+
+    cake.style.position = "relative";
+    cake.appendChild(topping);
+
+}
+
+
+function finishCake(){
+
+    document
+        .getElementById("cakeMessage")
+        .style.display = "block";
+
+}
+
 
 function makeWish(){
 
-  document
-    .querySelectorAll(".flame")
-    .forEach(f=>{
-      f.style.display="none";
-    });
+    document
+        .getElementById("flame1")
+        .style.display = "none";
 
+    document
+        .getElementById("flame2")
+        .style.display = "none";
 
-  createConfetti();
+    document
+        .getElementById("flame3")
+        .style.display = "none";
 
+    createConfetti();
 
-  setTimeout(()=>{
-
-    showPage("memoryPage");
-
-  },1500);
+    setTimeout(()=>{
+        showPage("wishPage");
+    },1500);
 
 }
 
 
-/* CONFETTI */
+/* ================= CONFETTI ================= */
 
 function createConfetti(){
 
-  const stuff=[
-    "🩵",
-    "🎀",
-    "💛",
-    "⭐",
-    "🌸",
-    "✦"
-  ];
+    for(let i=0;i<35;i++){
 
+        const confetti =
+            document.createElement("div");
 
-  for(let i=0;i<45;i++){
+        confetti.textContent =
+            ["✦","♡","✧","•","⭐"]
+            [Math.floor(Math.random()*5)];
 
-    const el =
-      document.createElement("div");
+        confetti.style.position = "fixed";
+        confetti.style.left =
+            Math.random()*100+"vw";
+        confetti.style.top = "-20px";
+        confetti.style.fontSize =
+            Math.random()*15+12+"px";
 
+        confetti.style.zIndex = "999";
 
-    el.className="confetti";
+        document.body.appendChild(confetti);
 
+        const duration =
+            Math.random()*2000+1500;
 
-    el.textContent =
-      stuff[
-        Math.floor(
-          Math.random()*stuff.length
-        )
-      ];
+        confetti.animate(
+            [
+                {
+                    transform:"translateY(0) rotate(0deg)",
+                    opacity:1
+                },
+                {
+                    transform:
+                        `translateY(110vh) rotate(360deg)`,
+                    opacity:0
+                }
+            ],
+            {
+                duration:duration,
+                easing:"ease-out"
+            }
+        );
 
+        setTimeout(()=>{
+            confetti.remove();
+        },duration);
 
-    el.style.left =
-      Math.random()*100+"vw";
-
-
-    el.style.fontSize =
-      12+Math.random()*12+"px";
-
-
-    el.style.animationDelay =
-      Math.random()*1.4+"s";
-
-
-    document.body.appendChild(el);
-
-
-    setTimeout(()=>{
-      el.remove();
-    },4000);
-
-  }
+    }
 
 }
 
 
-/* WISH JAR */
+/* ================= 50 WISHES ================= */
 
-const wishes=[
+const wishes = [
 
-  "May this year bring you the kind of happiness that quietly stays.",
+"May this year bring you soft mornings and bright little surprises.",
 
-  "May your days be softer, brighter, and filled with little reasons to smile.",
+"May your dreams grow quietly, beautifully, and at their own pace.",
 
-  "I hope you find beautiful things in the most unexpected places.",
+"You deserve a year filled with moments that feel like sunshine.",
 
-  "May every dream you carry slowly find its way toward you.",
+"May every little step you take lead you somewhere beautiful.",
 
-  "I hope you always have something wonderful to look forward to.",
+"May happiness find you in the most unexpected places.",
 
-  "May your heart feel lighter with every new chapter.",
+"May your heart always have a reason to smile.",
 
-  "I hope ordinary days become some of your favorite memories.",
+"May this chapter be softer, brighter, and kinder to you.",
 
-  "May you meet people who make life feel a little warmer.",
+"May you collect more memories than worries this year.",
 
-  "I hope you never forget how many beautiful moments are still waiting for you.",
+"May every ordinary day hide a little bit of magic.",
 
-  "May you have the courage to chase the things that make you genuinely happy.",
+"May you always find your way back to the things you love.",
 
-  "I hope this year gives you more moments worth remembering.",
+"May your days be filled with warm laughter and peaceful nights.",
 
-  "May your life be filled with gentle surprises and happy accidents.",
+"May beautiful things arrive when you least expect them.",
 
-  "I hope you laugh until your cheeks hurt a little more often.",
+"May you never forget how special your presence is.",
 
-  "May every little step forward remind you that you are growing.",
+"May this year give you more reasons to say, 'I'm happy.'",
 
-  "I hope you find peace in places you once found uncertainty.",
+"May your future be full of tiny moments worth remembering.",
 
-  "May the future hold more beautiful things than you can imagine.",
+"May every dream you keep in your heart slowly come true.",
 
-  "I hope you always have a safe place to return to.",
+"May you always be surrounded by people who make you feel safe.",
 
-  "May your dreams feel closer with every passing day.",
+"May life surprise you with something wonderful.",
 
-  "I hope happiness finds you even on the most ordinary afternoons.",
+"May your smile stay brighter than every cloudy day.",
 
-  "May you collect moments that feel like sunshine.",
+"May you have the courage to choose the life you truly want.",
 
-  "I hope you become someone your younger self would be proud of.",
+"May this year feel like opening a present every morning.",
 
-  "May your next chapter be full of stories worth telling.",
+"May your heart stay curious, gentle, and full of hope.",
 
-  "I hope you always leave room in your heart for new adventures.",
+"May you find beauty in places you never thought to look.",
 
-  "May life surprise you in the sweetest ways.",
+"May your happiest memories still be waiting for you.",
 
-  "I hope you wake up one day and realize how far you've come.",
+"May every new beginning bring you closer to yourself.",
 
-  "May you always find little pieces of magic in everyday life.",
+"May your life be sprinkled with little moments of magic.",
 
-  "I hope you have more reasons to say 'I'm glad I stayed.'",
+"May you laugh until your cheeks hurt more often.",
 
-  "May your smile come easily and often.",
+"May your dreams always have somewhere to grow.",
 
-  "I hope this year feels like opening a window to fresh air.",
+"May every season of your life bring something worth keeping.",
 
-  "May the things you secretly wish for slowly become real.",
+"May you wake up excited for the life you're creating.",
 
-  "I hope you never run out of reasons to believe in good things.",
+"May the world be gentle with your heart this year.",
 
-  "May every ending make space for something even more beautiful.",
+"May your days be filled with flowers, sunshine, and good news.",
 
-  "I hope you surround yourself with people who celebrate your existence.",
+"May you always have something lovely to look forward to.",
 
-  "May your life be filled with soft mornings and unforgettable nights.",
+"May your quiet wishes become your favorite memories.",
 
-  "I hope you find happiness that doesn't need to be explained.",
+"May you discover new reasons to love your life.",
 
-  "May your future be brighter than all the worries you leave behind.",
+"May every ending make space for something even more beautiful.",
 
-  "I hope you always have someone to laugh with over the smallest things.",
+"May you never run out of reasons to be hopeful.",
 
-  "May every season of your life teach you something beautiful.",
+"May your future self look back and smile at how far you've come.",
 
-  "I hope you give yourself permission to enjoy the little things.",
+"May you be surrounded by kindness wherever you go.",
 
-  "May your heart always remember how to hope.",
+"May your heart feel lighter with every new day.",
 
-  "I hope the coming months bring unexpected reasons to be grateful.",
+"May this year be full of stories you'll love telling someday.",
 
-  "May you keep becoming the person you want to be.",
+"May your life have more 'remember when...' moments.",
 
-  "I hope your life has more 'I can't believe this is real' moments.",
+"May every little wish you make find its way to you.",
 
-  "May every wish you make carry a little bit of magic.",
+"May you always have a safe place to rest your heart.",
 
-  "I hope you find beauty even in the messy parts of growing up.",
+"May your dreams be bigger than your fears.",
 
-  "May you always have a reason to look forward to tomorrow.",
+"May your life feel like a collection of beautiful little accidents.",
 
-  "I hope your happiest memories are still waiting to happen.",
+"May every sunrise bring you another reason to keep dreaming.",
 
-  "May you be surrounded by kindness wherever you go.",
+"May you always notice the tiny beautiful things around you.",
 
-  "I hope this birthday marks the beginning of something beautiful.",
+"May this birthday be the beginning of something wonderful.",
 
-  "May your story keep unfolding in the loveliest unexpected ways."
+"May the next chapter of your life be your sweetest one yet."
 
 ];
 
 
-let lastWish=-1;
+/* ================= WISH JAR ================= */
+
+let wishOrder = [];
+let wishIndex = 0;
 
 
-function openWish(){
+function shuffleWishes(){
 
-  let randomIndex;
+    wishOrder =
+        Array.from(
+            {length:wishes.length},
+            (_,i)=>i
+        );
 
+    for(let i=wishOrder.length-1;i>0;i--){
 
-  do{
+        const j =
+            Math.floor(Math.random()*(i+1));
 
-    randomIndex =
-      Math.floor(
-        Math.random()*wishes.length
-      );
+        [wishOrder[i],wishOrder[j]] =
+        [wishOrder[j],wishOrder[i]];
 
-  }while(
-    randomIndex===lastWish &&
-    wishes.length>1
-  );
+    }
 
-
-  lastWish=randomIndex;
-
-
-  const paper =
-    document.getElementById("wishPaper");
-
-
-  paper.classList.remove("show");
-
-
-  setTimeout(()=>{
-
-    paper.textContent =
-      wishes[randomIndex];
-
-
-    paper.classList.add("show");
-
-
-  },100);
-
-
-  createConfetti();
+    wishIndex = 0;
 
 }
 
 
-/* TICKET */
+shuffleWishes();
 
-function openTicket(){
 
-  document
-    .getElementById("ticketContent")
-    .classList.add("show");
+function openWishJar(){
 
-  createConfetti();
+    if(wishIndex >= wishOrder.length){
+        shuffleWishes();
+    }
+
+    const jar =
+        document.getElementById("jar");
+
+    const text =
+        document.getElementById("wishText");
+
+    const quote =
+        wishes[wishOrder[wishIndex]];
+
+    wishIndex++;
+
+    jar.classList.add("open");
+
+    text.classList.remove("show");
+
+    setTimeout(()=>{
+
+        text.textContent =
+            "“" + quote + "”";
+
+        text.classList.add("show");
+
+    },250);
 
 }
 
 
-/* LETTER */
+/* ================= LETTER ================= */
 
 function openLetter(){
 
-  document
-    .getElementById("letter")
-    .classList.add("show");
-
-
-  document
-    .getElementById("envelopeIcon")
-    .textContent="💌✨";
+    document
+        .getElementById("letter")
+        .classList.add("show");
 
 }
 
 
-/* GIFT */
+/* ================= GIFT ================= */
 
 function openGift(){
 
-  const gift =
-    document.getElementById("gift");
-
-
-  gift.classList.add("open");
-
-
-  setTimeout(()=>{
+    document
+        .getElementById("giftPhoto")
+        .classList.add("show");
 
     document
-      .getElementById("giftPhoto")
-      .classList.add("show");
-
-
-    document
-      .getElementById("giftMessage")
-      .classList.remove("hidden");
-
+        .getElementById("giftMessage")
+        .classList.add("show");
 
     document
-      .getElementById("endingButton")
-      .classList.remove("hidden");
-
-
-    createConfetti();
-
-  },600);
+        .getElementById("endingButton")
+        .style.display = "inline-block";
 
 }
 
 </script>
 
 </body>
-          </html>
+  </html>
